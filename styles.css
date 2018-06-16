@@ -1,0 +1,59 @@
+body {
+  position: relative;
+  font-family : Roboto, sans;
+  background-color: #fefefe;
+}
+#navbar-scroll {
+    background: linear-gradient(to right, #7474BF, #348AC7);
+    box-shadow: 0 5px 10px #314683;
+}
+.nav-link.active {
+    color : #fff
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.7);
+}
+.resume {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.resume a {
+    color: #5f7cc2;
+}
+.resume img {
+    height: 1.4rem;
+    margin : 0 0 0.15rem 0.8rem;
+}
+.header-icons img {
+    height: 2rem;
+    margin-right : 1rem;
+}
+.jumbotron {
+    color : white;
+    background: linear-gradient(to right, #7474BF, #348AC7);
+}
+.jumbotron hr {
+    border-top: 1px solid rgba(255,255,255,.2);
+}
+h1 {
+    padding-top : 2rem;
+    font-size:calc(2rem + 1.5vw);
+}
+h1, h2 {
+    font-family: 'Hammersmith One', sans;
+    font-weight: lighter;
+}
+h2 {
+    font-size: 2.3rem;
+}
+.icon-skills div {
+    margin-bottom : 2rem;
+}
+.icon-skills h5 {
+    margin-bottom: 0;
+    text-align: right;
+}
+.icon-skills i {
+    font-size: 3rem;
+    margin-right : 1rem;
+}
