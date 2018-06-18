@@ -1,11 +1,18 @@
+/*
+    LAYOUTS
+*/
 body {
   position: relative;
   font-family : Roboto, sans;
   background-color: #fefefe;
 }
+
+
+/*
+    NAVBAR
+*/
 #navbar-scroll {
     background: linear-gradient(to right, #7474BF, #348AC7);
-    box-shadow: 0 5px 10px #314683;
 }
 .nav-link.active {
     color : #fff
@@ -13,16 +20,12 @@ body {
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255,255,255,.7);
 }
-.resume {
-    margin-bottom: 2rem;
-    text-align: center;
-}
-.resume a {
-    color: #5f7cc2;
-}
-.resume img {
-    height: 1.4rem;
-    margin : 0 0 0.15rem 0.8rem;
+
+/*
+    JUMBOTRONS
+*/
+header.jumbotron {
+    margin-bottom: 0;
 }
 .header-icons img {
     height: 2rem;
@@ -35,18 +38,41 @@ body {
 .jumbotron hr {
     border-top: 1px solid rgba(255,255,255,.2);
 }
-h1 {
-    padding-top : 2rem;
-    font-size:calc(2rem + 1.5vw);
-}
-h1, h2 {
+h1, h2, h3, h4, h5 {
     font-family: 'Hammersmith One', sans;
     font-weight: lighter;
+}
+h1 {
+    padding-top : 2rem;
+    font-size: calc(2rem + 1.5vw);
 }
 h2 {
     font-size: 2.3rem;
 }
-.icon-skills div {
+
+/*
+    RESUME
+*/
+.resume {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.resume a {
+    color: #5f7cc2;
+}
+.resume img {
+    height: 1.4rem;
+    margin : 0 0 0.15rem 0.8rem;
+}
+
+/*
+    SKILLS
+*/
+.icon-skills, #experience {
+    margin-bottom: 1.5rem;
+}
+.icon-skills .row:not(:last-child) {
     margin-bottom : 2rem;
 }
 .icon-skills h5 {
@@ -56,4 +82,41 @@ h2 {
 .icon-skills i {
     font-size: 3rem;
     margin-right : 1rem;
+}
+.tooltip-inner {
+    background-color: #5f7cc2;
+}
+.tooltip .arrow::before {
+    border-top-color: #5f7cc2;
+}
+
+
+/*
+    COLLAPSE
+*/
+.accordion .card-header:after {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    /*line-height: 1;*/
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+
+    float: right;
+    color: #222;
+}
+.accordion .card-header:not(.collapsed):after {
+    content: "\f078";
+}
+.accordion .card-header.collapsed:after {
+    content: "\f054";
+}
+.card-header .text-secondary {
+    margin-left: 1rem;
+    margin-right: 2rem;
+}
+.card-header .badge {
 }

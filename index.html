@@ -11,6 +11,10 @@
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500|Hammersmith+One' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/solid.css" integrity="sha384-Rw5qeepMFvJVEZdSo1nDQD5B6wX0m7c5Z/pLNvjkB14W6Yki1hKbSEQaX9ffUbWe" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css" integrity="sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV" crossorigin="anonymous">
+
+
 
     <link rel="stylesheet" href="styles.css" />
 	<script src="scripts.js"></script>
@@ -19,7 +23,7 @@
     <title>Vincent Fougeras</title>
 </head>
 <body data-spy="scroll" data-target="#navbar-scroll">
-    <div class="jumbotron jumbotron-fluid">
+    <header class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1>Vincent Fougeras</h1>
             <p class="lead">Computer science student</p>
@@ -29,12 +33,8 @@
 				<a href="https://www.linkedin.com/in/vincentfougeras/" target="_blank"><img src="assets/in.png" alt="LinkedIn"/></a>
 			</p>
         </div>
-    </div>
-    <div class="container resume">
-        <h4><a href="assets/CV_FOUGERAS_Vincent.pdf">My resume<img src="assets/fr.png"/></a>
-            <a href="assets/CV_FOUGERAS_Vincent_en.pdf"><img src="assets/uk.png"/></a></h4>
-    </div>
-    <nav id="navbar-scroll" class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    </header>
+    <nav id="navbar-scroll" class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark shadow-lg p-3 mb-5">
         <div class="container">
             <a class="navbar-brand" href="#">Vincent Fougeras</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-scroll-collapse"
@@ -56,6 +56,16 @@
             </div>
         </div>
     </nav>
+    <div class="container resume">
+        <img src="..." alt="..." class="img-thumbnail rounded float-left">
+        <p>I am passionate about new technologies and the future of computer science.</p>
+        <p>I am currently studying at Toulouse University. I have a diploma in Computer Science, where I learned a lot about software and web development, database management and system administration. I am enthusiastic about improving my knowledge of software development at Toulouse University.</p>
+        <p>I especially like to work in teams but I am also very capable of working by myself. I have completed multiple software projects, in which I invested my skills to get the best possible result.</p>
+        <h4>
+            <a href="assets/CV_FOUGERAS_Vincent.pdf">My resume<img src="assets/fr.png"/></a>
+            <a href="assets/CV_FOUGERAS_Vincent_en.pdf"><img src="assets/uk.png"/></a>
+        </h4>
+    </div>
     <section id="skills">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
@@ -68,10 +78,10 @@
                     <h5>Software development</h5>
                 </div>
                 <div class="col-md-9">
-                    <i class="devicon-java-plain colored"></i>
-                    <i class="devicon-c-plain colored"></i>
-                    <i class="devicon-python-plain colored"></i>
-                    <i class="devicon-android-plain colored"></i>
+                    <i class="devicon-java-plain colored" data-toggle="tooltip" title="Java"></i>
+                    <i class="devicon-c-plain colored" data-toggle="tooltip" title="C"></i>
+                    <i class="devicon-python-plain colored" data-toggle="tooltip" title="Python"></i>
+                    <i class="devicon-android-plain colored" data-toggle="tooltip" title="Android"></i>
                 </div>
             </div>
             <div class="row align-items-center">
@@ -79,13 +89,13 @@
                     <h5>Front-end web dev.</h5>
                 </div>
                 <div class="col-md-9">
-                    <i class="devicon-html5-plain colored"></i>
-                    <i class="devicon-bootstrap-plain colored"></i>
-                    <i class="devicon-css3-plain colored"></i>
-                    <i class="devicon-sass-original colored"></i>
-                    <i class="devicon-javascript-plain colored"></i>
-                    <i class="devicon-jquery-plain colored"></i>
-                    <i class="devicon-angularjs-plain colored"></i>
+                    <i class="devicon-html5-plain colored" data-toggle="tooltip" title="HTML"></i>
+                    <i class="devicon-bootstrap-plain colored" data-toggle="tooltip" title="Bootstrap"></i>
+                    <i class="devicon-css3-plain colored" data-toggle="tooltip" title="CSS"></i>
+                    <i class="devicon-sass-original colored" data-toggle="tooltip" title="Sass"></i>
+                    <i class="devicon-javascript-plain colored" data-toggle="tooltip" title="JavaScript"></i>
+                    <i class="devicon-jquery-plain colored" data-toggle="tooltip" title="jQuery"></i>
+                    <i class="devicon-angularjs-plain colored" data-toggle="tooltip" title="Angular"></i>
                 </div>
             </div>
             <div class="row align-items-center">
@@ -93,9 +103,9 @@
                     <h5>Back-end web dev.</h5>
                 </div>
                 <div class="col-md-9">
-                    <i class="devicon-php-plain colored"></i>
-                    <i class="devicon-laravel-plain colored"></i>
-                    <i class="devicon-mysql-plain colored"></i>
+                    <i class="devicon-php-plain colored" data-toggle="tooltip" title="PHP"></i>
+                    <i class="devicon-laravel-plain colored" data-toggle="tooltip" title="Laravel"></i>
+                    <i class="devicon-mysql-plain colored" data-toggle="tooltip" title="MySQL"></i>
                 </div>
             </div>
             <div class="row align-items-center">
@@ -103,11 +113,11 @@
                     <h5>Tools</h5>
                 </div>
                 <div class="col-md-9">
-                    <i class="devicon-linux-plain colored"></i>
-                    <i class="devicon-git-plain colored"></i>
-                    <i class="devicon-inkscape-plain colored"></i>
-                    <i class="devicon-phpstorm-plain colored"></i>
-                    <i class="devicon-pycharm-plain colored"></i>
+                    <i class="devicon-linux-plain colored" data-toggle="tooltip" title="Bash"></i>
+                    <i class="devicon-git-plain colored" data-toggle="tooltip" title="Git"></i>
+                    <i class="devicon-inkscape-plain colored" data-toggle="tooltip" title="Inkscape"></i>
+                    <i class="devicon-phpstorm-plain colored" data-toggle="tooltip" title="PHPStorm"></i>
+                    <i class="devicon-pycharm-plain colored" data-toggle="tooltip" title="PyCharm"></i>
                 </div>
             </div>
         </div>
@@ -119,9 +129,34 @@
             </div>
         </div>
         <div>
+            <div class="container">
+                <div class="accordion" id="accordionExperience">
+                    <div class="card">
+                        <div class="card-header collapsed" id="cottage" data-toggle="collapse" data-target="#collapse1">
+                            Holiday cottage website
+                            <span class="text-secondary">2017-2018</span>
+                            <span class="badge badge-primary">Laravel</span>
+                            <span class="badge badge-primary">Stripe</span>
+                        </div>
+                        <div id="collapse1" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExperience">
+                            <div class="card-body">
+                                <p>
+                                    I have developped a holiday cottage website, named <a href="https://giteducoutelier.fr" target="_blank">Gîte du Coutelier</a>.
+                                    Users can book directly on the website, thanks to
+                                    <a href="https://stripe.com" target="_blank">Stripe</a>, a secured payment method.
+                                </p>
+                                <p>
+                                    The site also offers a section for clients to leave a comment, and a section where the website administrator
+                                    can talk about various activities surrounding the cottage.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <section id="skills">
+    <section id="projects">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h2>Projects</h2>
