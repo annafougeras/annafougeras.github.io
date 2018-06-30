@@ -1,0 +1,73 @@
+.fs {
+  text-decoration: underline;
+}
+.fs > img {
+  display : none;
+  position : fixed;
+  top : 0;
+  left : 0;
+  min-height: 100vh;
+  min-width : 100%;
+}
+
+/* Code for the demo */
+body {
+  background-color: rgb(117, 75, 128);
+  color : white;
+  font-family: 'VT323', monospace;
+  font-size: 1.7em;
+  width : 95%;
+  max-width: 800px;
+  margin: auto;
+}
+h1 {
+  font-weight: normal;
+  text-align: center;
+}
+section {
+  margin-bottom: 30px;
+}
+
+.example {
+  text-align: center;
+  font-size: 1.2em;
+  position: relative;
+  bottom : -20px;
+}
+.demo-pic {
+  font-size: 1.1em;
+  text-align: center;
+}
+.demo-pic span:not(.trainstation) {
+  margin-right: 50px;
+}
+
+a {
+  color : white;
+}
+.source, footer {
+  font-size: 0.8em;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+textarea {
+  background-color: rgb(74, 47, 82);
+  /*display: block;
+  white-space: pre-wrap;*/
+  padding : 20px;
+  font-family: 'VT323', monospace;
+  font-size: inherit;
+  border : none;
+  width : 100%;
+  height : 100%;
+  resize: none;
+  cursor: default;
+  color : white;
+}
+section.code p {
+  margin-bottom: 5px;
+}
+.grey {
+  color : rgb(149, 120, 158);
+}

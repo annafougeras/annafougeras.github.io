@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fullscreen</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>Fullscreen picture on hover demo</h1>
+  <section class="intro">
+    <p>With the following code, you can show a picture spanning over the entire window when hovering the mouse over some text</p>
+    <p class="example">Examples</p>
+    <p class="demo-pic">
+      <span class="fs">At home<img src="athome.gif"/></span>
+      <span class="fs">The pond<img src="thepond.gif"/></span>
+      <span class="fs trainstation">Train station<img src="trainstation.gif"/></span>
+    </p>
+    <p class="source">
+      <a href="http://1041uuu.tumblr.com/">Image Source</a>
+    </p>
+
+  </section>
+  <section class="code">
+    <p>HTML code</p>
+    <textarea readonly rows="1">&lt;span class="fs"&gt;your_text&lt;img src="your_image"/&gt;&lt;/span&gt;</textarea>
+
+    <p>CSS code</p>
+    <textarea readonly rows="12">.fs {
+  text-decoration: underline;
+}
+.fs > img {
+  display : none;
+  position : fixed;
+  top : 0;
+  left : 0;
+  min-height: 100vh;
+  min-width : 100%;
+  opacity: 0.5;
+}</textarea>
+    <p>Javascript code (jQuery is required)</p>
+
+    <textarea readonly rows="22">$(document).ready(function(){
+    var initialX;
+    var initialY;
+    $("span.fs").mouseenter(function(e){
+      $(this).children("img").show();
+      // Take the initial mouse coordinates
+      initialX = e.pageX;
+      initialY = e.pageY;
+    });
+
+    // Close the fullscreen image when the cursor
+    // gets too far from the initial position
+    $("span.fs").mousemove(function(e){
+      var currentX = e.pageX;
+      var currentY = e.pageY;
+      // Compare the current coordinates with the initial coordinates
+      if(Math.abs(currentX - initialX) > 30
+      || Math.abs(currentY - initialY) > 30){
+        $(this).children("img").hide();
+      }
+    });
+});</textarea>
+
+  </section>
+  <footer>
+    <a href="../index.html">Vincent Fougeras, 2017</a>
+  </footer>
+</body>
+
+<script>
+$(document).ready(function(){
+    var initialX;
+    var initialY;
+    $("span.fs").mouseenter(function(e){
+      $(this).children("img").show();
+      // Take the initial mouse coordinates
+      initialX = e.pageX;
+      initialY = e.pageY;
+    });
+
+    // Close the fullscreen image when the cursor gets too far from the initial position
+    $("span.fs").mousemove(function(e){
+      var currentX = e.pageX;
+      var currentY = e.pageY;
+      // Compare the current coordinates with the initial coordinates
+      if(Math.abs(currentX - initialX) > 30 || Math.abs(currentY - initialY) > 30){
+        $(this).children("img").hide();
+      }
+    });
+
+    /* For demo purposes */
+    // Select the entire code on focus
+    $("textarea").click(function(e){
+      $(this).select();
+    });
+});
+</script>
+</html>
