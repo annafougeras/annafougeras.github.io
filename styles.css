@@ -17,8 +17,16 @@ body {
 #navbar-scroll {
     background: linear-gradient(to right, #99afe8, #4166b2);
 }
+.nav-link {
+    padding-bottom: 6px;
+    border-bottom: 2px solid transparent;
+}
 .nav-link.active {
-    color : #fff
+    color : #fff;
+    border-bottom-color: #fff;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fff;
 }
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255,255,255,.7);
@@ -32,6 +40,9 @@ body {
 }
 .nav-item img {
     height: 24px;
+}
+.nav-item.language:hover {
+    opacity: 0.8;
 }
 
 /*
@@ -85,6 +96,13 @@ h2 {
 }
 #resume h2 {
     padding-bottom : 0;
+    margin-bottom: 0;
+}
+@media (max-width: 575px){
+    #resume h2 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 }
 #resume p {
     display: inline-block;
@@ -95,6 +113,16 @@ h2 {
 }
 #resume img.uk {
     margin-left: 0.8rem;
+}
+#resume a {
+    padding: 1.5rem 2rem;
+    transition: 0.4s;
+}
+#resume a:hover {
+    text-decoration: none;
+    background-color: #efefef;
+    color: #a77db2;
+    box-shadow: 0 0.5rem 3rem rgba(80,80,80,.2);
 }
 
 /*
@@ -163,6 +191,8 @@ h2 {
 }
 .card-header .badge-primary {
     background-color: #415688;
+    font-size: 0.85em;
+    font-weight: 500;
 }
 
 @media (min-width: 576px) {
