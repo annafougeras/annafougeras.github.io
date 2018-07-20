@@ -11,6 +11,9 @@ body {
 /*
     NAVBAR
 */
+.sticky-top {
+    top: -1;
+}
 #navbar-scroll {
     background: linear-gradient(to right, #99afe8, #4166b2);
 }
@@ -103,9 +106,6 @@ h2 {
 .icon-skills .row:not(:last-child) {
     margin-bottom : 2rem;
 }
-.icon-skills h5 {
-    margin-bottom: 0;
-}
 @media (min-width: 768px){
     .icon-skills h5 {
         text-align: right;
@@ -161,12 +161,21 @@ h2 {
 .accordion .card-header.collapsed:after {
     content: "\f054";
 }
-.card-header .text-secondary {
-    margin-left: 1rem;
-    margin-right: 2rem;
-}
 .card-header .badge-primary {
     background-color: #415688;
+}
+
+@media (min-width: 576px) {
+    .card-header div {
+        display: inline;
+    }
+    .card-header .text-secondary {
+        margin-left: 1rem;
+        margin-right: 2rem;
+    }
+}
+.card-header div:last-child {
+    display: inline-block;
 }
 
 /*
