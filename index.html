@@ -44,7 +44,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbar-scroll-collapse">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#experience">Experience</a>
                     </li>
@@ -55,21 +55,27 @@
                         <a class="nav-link" href="#projects">Projects</a>
                     </li>
                 </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="assets/CV_FOUGERAS_Vincent_en.pdf">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index-fr.html"><img src="assets/fr.svg"/></a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
     <section id="description">
         <div class="container">
             <p>I am passionate about new technologies and the future of computer science.</p>
-            <p>I am currently studying at Toulouse University. I have a diploma in Computer Science, where I learned a lot about software and web development, database management and system administration. I am enthusiastic about improving my knowledge of software development at Toulouse University.</p>
+            <p>I am currently studying <a href="https://masterihm.fr">GUI conception</a> at Toulouse University. I have a diploma in Computer Science, where I learned a lot about software and web development, database management and system administration. I am enthusiastic about improving my knowledge of software development at Toulouse University.</p>
             <p>I especially like to work in teams but I am also very capable of working by myself. I have completed multiple software projects, in which I invested my skills to get the best possible result.</p>
         </div>
     </section>
     <section id="resume" class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h2><a href="assets/CV_FOUGERAS_Vincent.pdf">Get my resume</a></h2>
-            <p><a href="assets/CV_FOUGERAS_Vincent.pdf"><img src="assets/fr.png"/></a></p>
-            <p><a href="assets/CV_FOUGERAS_Vincent_en.pdf"><img src="assets/uk.png"/></a></p>
+            <h2><a href="assets/CV_FOUGERAS_Vincent_en.pdf">Get my resume</a></h2>
         </div>
     </section>
     <section id="experience">
@@ -183,10 +189,10 @@
                     <h5>Software development</h5>
                 </div>
                 <div class="col-md-9">
-                    <i class="devicon-java-plain-wordmark" data-toggle="tooltip" title="Java"></i>
-                    <i class="devicon-c-plain-wordmark" data-toggle="tooltip" title="C"></i>
-                    <i class="devicon-python-plain-wordmark" data-toggle="tooltip" title="Python"></i>
-                    <i class="devicon-android-plain-wordmark" data-toggle="tooltip" title="Android"></i>
+                    <span class="icon"><i class="devicon-java-plain-wordmark" data-toggle="tooltip" title="Java"></i><span>★★</span></span>
+                    <span class="icon"><i class="devicon-c-plain-wordmark" data-toggle="tooltip" title="C"></i><span>★★</span></span>
+                    <span class="icon"><i class="devicon-python-plain-wordmark" data-toggle="tooltip" title="Python"></i><span>★</span></span>
+                    <span class="icon"><i class="devicon-android-plain-wordmark" data-toggle="tooltip" title="Android"></i><span>★★</span></span>
                 </div>
             </div>
             <div class="row align-items-center">
@@ -194,13 +200,13 @@
                     <h5>Front-end web dev.</h5>
                 </div>
                 <div class="col-md-9">
-                    <i class="devicon-html5-plain-wordmark" data-toggle="tooltip" title="HTML"></i>
-                    <i class="devicon-bootstrap-plain-wordmark" data-toggle="tooltip" title="Bootstrap"></i>
-                    <i class="devicon-css3-plain-wordmark" data-toggle="tooltip" title="CSS"></i>
-                    <i class="devicon-sass-original" data-toggle="tooltip" title="Sass"></i>
-                    <i class="devicon-javascript-plain" data-toggle="tooltip" title="JavaScript"></i>
-                    <i class="devicon-jquery-plain-wordmark" data-toggle="tooltip" title="jQuery"></i>
-                    <i class="devicon-angularjs-plain" data-toggle="tooltip" title="Angular"></i>
+                    <span class="icon"><i class="devicon-html5-plain-wordmark" data-toggle="tooltip" title="HTML"></i><span>★★</span></span>
+                    <span class="icon"><i class="devicon-bootstrap-plain-wordmark" data-toggle="tooltip" title="Bootstrap"></i><span>★★</span></span>
+                    <span class="icon"><i class="devicon-css3-plain-wordmark" data-toggle="tooltip" title="CSS"></i><span>★★</span></span>
+                    <span class="icon"><i class="devicon-sass-original" data-toggle="tooltip" title="Sass"></i><span>★</span></span>
+                    <span class="icon"><i class="devicon-javascript-plain" data-toggle="tooltip" title="JavaScript"></i><span>★</span></span>
+                    <span class="icon"><i class="devicon-jquery-plain-wordmark" data-toggle="tooltip" title="jQuery"></i><span>★★</span></span>
+                    <span class="icon"><i class="devicon-angularjs-plain" data-toggle="tooltip" title="Angular"></i><span>★★</span></span>
                 </div>
             </div>
             <div class="row align-items-center">
@@ -208,9 +214,9 @@
                     <h5>Back-end web dev.</h5>
                 </div>
                 <div class="col-md-9">
-                    <i class="devicon-php-plain" data-toggle="tooltip" title="PHP"></i>
-                    <i class="devicon-laravel-plain-wordmark" data-toggle="tooltip" title="Laravel"></i>
-                    <i class="devicon-mysql-plain-wordmark" data-toggle="tooltip" title="MySQL"></i>
+                    <span class="icon"><i class="devicon-php-plain" data-toggle="tooltip" title="PHP"></i><span>★★</span></span>
+                    <span class="icon"><i class="devicon-laravel-plain-wordmark" data-toggle="tooltip" title="Laravel"></i><span>★★</span></span>
+                    <span class="icon"><i class="devicon-mysql-plain-wordmark" data-toggle="tooltip" title="MySQL"></i><span>★★</span></span>
                 </div>
             </div>
             <div class="row align-items-center">
@@ -218,11 +224,30 @@
                     <h5>Tools</h5>
                 </div>
                 <div class="col-md-9">
-                    <i class="devicon-linux-plain" data-toggle="tooltip" title="Bash"></i>
-                    <i class="devicon-git-plain-wordmark" data-toggle="tooltip" title="Git"></i>
-                    <i class="devicon-inkscape-plain-wordmark" data-toggle="tooltip" title="Inkscape"></i>
-                    <i class="devicon-phpstorm-plain-wordmark" data-toggle="tooltip" title="PHPStorm"></i>
-                    <i class="devicon-pycharm-plain-wordmark" data-toggle="tooltip" title="PyCharm"></i>
+                    <span class="icon"><i class="devicon-linux-plain" data-toggle="tooltip" title="Bash"></i><span>★</span></span>
+                    <span class="icon"><i class="devicon-git-plain-wordmark" data-toggle="tooltip" title="Git"></i><span>★</span></span>
+                    <span class="icon"><i class="devicon-inkscape-plain-wordmark" data-toggle="tooltip" title="Inkscape"></i><span>★</span></span>
+                    <span class="icon"><i class="devicon-phpstorm-plain-wordmark" data-toggle="tooltip" title="PHPStorm"></i><span>★★</span></span>
+                    <span class="icon"><i class="devicon-pycharm-plain-wordmark" data-toggle="tooltip" title="PyCharm"></i><span>★</span></span>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <h5>Languages</h5>
+                </div>
+                <div class="col-md-9">
+                    <span class="icon">
+                        <img src="assets/fr.svg" data-toggle="tooltip" title="Français"></img>
+                        <span data-toggle="tooltip" data-placement="bottom" title="First language">★★</span>
+                    </span>
+                    <span class="icon">
+                        <img src="assets/uk.svg" data-toggle="tooltip" title="English"></img>
+                        <span data-toggle="tooltip" data-placement="bottom" title="Very good communication skills">★★</span>
+                    </span>
+                    <span class="icon">
+                        <img src="assets/jp.svg" data-toggle="tooltip" title="日本語"></img>
+                        <span data-toggle="tooltip" data-placement="bottom" title="JLPT N4 level">★</span>
+                    </span>
                 </div>
             </div>
         </div>
@@ -412,7 +437,7 @@
             <h3><a href="mailto:fougeras.vincent@gmail.com">Contact me</h3>
             <hr/>
             <p><a href="#">Vincent Fougeras</a></p>
-            <div>Flag icons made by <a href="https://dribbble.com/msenyil">Muharrem Şenyıl</a></div>
+            <div>Flag icons designed by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
         </div>
     </footer>
 </body>

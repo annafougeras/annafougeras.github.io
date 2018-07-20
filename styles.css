@@ -12,7 +12,7 @@ body {
     NAVBAR
 */
 #navbar-scroll {
-    background: linear-gradient(to right, #7474BF, #348AC7);
+    background: linear-gradient(to right, #99afe8, #4166b2);
 }
 .nav-link.active {
     color : #fff
@@ -27,6 +27,9 @@ body {
     font-family: 'Hammersmith One', sans;
     font-weight: lighter;
 }
+.nav-item img {
+    height: 24px;
+}
 
 /*
     JUMBOTRONS
@@ -40,7 +43,7 @@ header.jumbotron {
 }
 .jumbotron {
     color : white;
-    background: linear-gradient(to right, #7474BF, #348AC7);
+    background: linear-gradient(to right, #99afe8, #4166b2);
 }
 .jumbotron a, .jumbotron a:hover {
     color : white;
@@ -63,6 +66,9 @@ h2 {
     font-size: calc(1.8rem + 0.7vw);
     padding-bottom : 2rem;
 }
+#skills.jumbotron, #resume.jumbotron {
+    background: linear-gradient(to left, #654ea3, #eaafc8);
+}
 
 /*
     RESUME
@@ -70,7 +76,6 @@ h2 {
 #description {
     margin-top: 3rem;
     margin-bottom: 3rem;
-    text-align: center;
 }
 #resume {
     text-align: center;
@@ -106,9 +111,23 @@ h2 {
         text-align: right;
     }
 }
-.icon-skills i {
+.icon-skills .icon {
+    display: inline-block;
+}
+.icon-skills .icon i {
     font-size: 3rem;
     margin-right : 1rem;
+    display: inline-block;
+}
+.icon-skills .icon img {
+    height: 3rem;
+    margin-right : 1rem;
+}
+.icon-skills .icon span {
+    font-size: 0.9rem;
+    display: block;
+    text-align: center;
+    margin-right: 1rem;
 }
 .tooltip-inner {
     color : #212529;
@@ -116,8 +135,8 @@ h2 {
 }
 .tooltip .arrow::before {
     border-top-color: #fff;
+    border-bottom-color: #fff;
 }
-
 
 /*
     COLLAPSE
@@ -146,7 +165,8 @@ h2 {
     margin-left: 1rem;
     margin-right: 2rem;
 }
-.card-header .badge {
+.card-header .badge-primary {
+    background-color: #415688;
 }
 
 /*
@@ -171,7 +191,7 @@ h2 {
 */
 footer {
     text-align: center;
-    background: linear-gradient(to right, #7474BF, #348AC7);
+    background: linear-gradient(to right, #99afe8, #4166b2);
     padding: 2rem;
     color : white;
 }
