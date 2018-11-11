@@ -28,7 +28,7 @@
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1>Vincent Fougeras</h1>
-            <p class="lead">Computer science student</p>
+            <p class="lead">Etudiant en informatique</p>
             <hr class="my-4">
             <p class="header-icons">
                 <a href="https://github.com/vincentfougeras/" target="_blank"><img src="assets/github.png" alt="Github"/></a>
@@ -36,7 +36,7 @@
 			</p>
         </div>
     </header>
-    <nav id="navbar-scroll" class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark shadow-lg p-3 mb-5">
+    <nav id="navbar-scroll" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark shadow-lg p-3 mb-5">
         <div class="container">
             <a class="navbar-brand" href="#">Vincent Fougeras</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-scroll-collapse"
@@ -46,21 +46,21 @@
             <div class="collapse navbar-collapse" id="navbar-scroll-collapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
+                        <a class="nav-link" href="#experience">Expérience</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link" href="#skills">Compétences</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link" href="#projects">Projets</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="assets/CV_FOUGERAS_Vincent_en.pdf">Resume</a>
+                        <a class="nav-link" href="assets/CV_FOUGERAS_Vincent.pdf">CV</a>
                     </li>
                     <li class="nav-item language">
-                        <a class="nav-link" href="index-fr.html"><img src="assets/fr.svg"/></a>
+                        <a class="nav-link" href="index-en.html"><img src="assets/uk.svg"/></a>
                     </li>
                 </ul>
             </div>
@@ -68,23 +68,26 @@
     </nav>
     <section id="description">
         <div class="container">
-            <p>I am passionate about new technologies and the future of computer science.</p>
-            <p>I am currently studying <a href="https://masterihm.fr">GUI conception</a> at Toulouse University. I have a diploma in Computer Science, where I learned a lot about software and web development, database management and system administration. I am enthusiastic about improving my knowledge of software development at Toulouse University.</p>
-            <p>I especially like to work in teams but I am also very capable of working by myself. I have completed multiple software projects, in which I invested my skills to get the best possible result.</p>
+            <p>Je suis passioné par les nouvelles technologies et le futur de l'informatique.</p>
+            <p>Je suis étudiant en <a href="https://masterihm.fr">Master IHM</a> à l'université Toulouse Paul Sabatier.
+                J'ai effectué un DUT informatique et une L3 informatique, qui m'ont permis d'en apprendre beaucoup sur le développement de logiciels,
+                la gestion de bases de données et l'administration système. J'ai hâte de pouvoir approfondir mes connaissances dans la conception d'IHM
+                à l'université Paul Sabatier.</p>
+            <p>J'apprécie particulièrement le travail en équipe mais je suis également capable de travailler en autonomie.</p>
         </div>
     </section>
     <section id="resume" class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h2><a href="assets/CV_FOUGERAS_Vincent_en.pdf">Get my resume</a></h2>
+            <h2><a href="assets/CV_FOUGERAS_Vincent.pdf">Télécharger mon CV</a></h2>
         </div>
     </section>
     <section id="experience">
         <div class="container">
-            <h2>Experience</h2>
+            <h2>Expérience</h2>
             <div class="accordion" id="accordionExperience">
                 <div class="card">
                     <div class="card-header" id="celad" data-toggle="collapse" data-target="#collapse0">
-                        <div>Monitoring web application at CELAD</div>
+                        <div>Application web de monitoring à CELAD</div>
                         <div class="text-secondary">2018</div>
                         <div>
                             <span class="badge badge-primary">Angular</span>
@@ -96,28 +99,29 @@
                     <div id="collapse0" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExperience">
                         <div class="card-body">
                             <p>
-                                I developped a web application during my 3 month internship at <a href="https://www.celad.com/">CELAD</a>. The app purpose was to monitor the progress of test campaigns in real time.</p>
+                                J'ai effectué un stage de 3 mois chez <a href="https://www.celad.com/">CELAD</a>, dans lequel j'ai développé une application web
+                                visant à suivre en temps réel l'avancée de campagnes de test.</p>
                             <p>
-                                The front-end used the <a href="https://angular.io">Angular</a> framework, a modern technology for the web. I used various librairies
-                                like <a href="https://akveo.github.io/nebular/">Nebular</a> and <a href="https://github.com/ngrx/platform">@ngrx</a>
-                                to create a dynamic and reactive app.
+                                La partie front-end de l'application utilisait le framework <a href="https://angular.io">Angular</a>, une technologie moderne
+                                pour le web. J'ai utilisé différentes librairies comme <a href="https://akveo.github.io/nebular/">Nebular</a> et
+                                <a href="https://github.com/ngrx/platform">@ngrx</a> afin d'obtenir une application dynamique et réactive.
                             </p>
                             <p>
-                                We used a lightweight back-end using the Python framework <a href="http://flask.pocoo.org/">Flask</a>, and <a href="https://socket.io/">SocketIO</a>
-                                to handle the communication between the front-end and the back-end.
+                                Pour la partie back-end, j'ai utilisé le framework Python <a href="http://flask.pocoo.org/">Flask</a>, choisi pour sa légèreté,
+                                et j'ai utilisé <a href="https://socket.io/">SocketIO</a> pour gérer la communication entre le front-end et le back-end.
                             </p>
                             <div>
-    							<a href="assets/celad1.png" data-caption="Overview of every test bench" data-fancybox="celad" ><img class="img-thumbnail" src="assets/celad1.png" width="150"/></a>
-    							<a href="assets/celad2.png" data-caption="A bench details" data-fancybox="celad"><img class="img-thumbnail" src="assets/celad2.png" width="150"/></a>
-    							<a href="assets/celad3.png" data-caption="Accessing a test's attachments" data-fancybox="celad"><img class="img-thumbnail" src="assets/celad3.png" width="150"/></a>
-                                <a href="assets/celad4.png" data-caption="The campaign builder tool" data-fancybox="celad"><img class="img-thumbnail" src="assets/celad4.png" width="150"/></a>
+    							<a href="assets/celad1.png" data-caption="Vue d'ensemble de tous les bancs de test" data-fancybox="celad" ><img class="img-thumbnail" src="assets/celad1.png" width="150"/></a>
+    							<a href="assets/celad2.png" data-caption="Les détails d'un banc de test, avec la campagne en cours d'exécution" data-fancybox="celad"><img class="img-thumbnail" src="assets/celad2.png" width="150"/></a>
+    							<a href="assets/celad3.png" data-caption="On peut accéder aux pièces jointes d'une campagne" data-fancybox="celad"><img class="img-thumbnail" src="assets/celad3.png" width="150"/></a>
+                                <a href="assets/celad4.png" data-caption="L'outil de construction de campagnes" data-fancybox="celad"><img class="img-thumbnail" src="assets/celad4.png" width="150"/></a>
     						</div>
                         </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-header collapsed" id="cottage" data-toggle="collapse" data-target="#collapse1">
-                        <div>Holiday cottage website</div>
+                        <div>Site web Gîte du Coutelier</div>
                         <div class="text-secondary">2017-2018</div>
                         <div>
                             <span class="badge badge-primary">Laravel</span>
@@ -127,20 +131,20 @@
                     <div id="collapse1" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExperience">
                         <div class="card-body">
                             <p>
-                                I have developped a holiday cottage website, named <a href="https://giteducoutelier.fr" target="_blank">Gîte du Coutelier</a>.
-                                Users can book directly on the website, thanks to
-                                <a href="https://stripe.com" target="_blank">Stripe</a>, a secured payment method.
+                                J'ai créé un site de promotion d'un gîte, appelé <a href="https://giteducoutelier.fr" target="_blank">Gîte du Coutelier</a>.
+                                Il est possible de faire des réservations directement sur le site, grâce à
+                                <a href="https://stripe.com" target="_blank">Stripe</a>, un module de paiement sécurisé.
                             </p>
                             <p>
-                                The site also offers a section for clients to leave a comment, and a section where the website administrator
-                                can talk about various activities surrounding the cottage.
+                                Le site comporte également une section où les clients peuvent laisser un avis,
+                                et une section dans laquelle les administrateurs du site peuvent présenter des activités qui ont lieu autour du gîte.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-header collapsed" id="braco" data-toggle="collapse" data-target="#collapse2">
-                        <div>Braco website</div>
+                        <div>Site web Braco</div>
                         <div class="text-secondary">2016</div>
                         <div>
                             <span class="badge badge-primary">PHP</span>
@@ -151,24 +155,25 @@
                     <div id="collapse2" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExperience">
                         <div class="card-body">
                             <p>
-    							I worked on the website Braco during the summer of 2016. This website was used to compare and rate clothing brands.
+    							J'ai travaillé sur le site web Braco pendant l'été 2016. Il s'agissait d'un site servant à comparer et noter les marques de vêtements.
     			            <p>
-    			                I was mainly in charge of the website's back-end.
-    			                I chose to use the PHP framework <a target="_blank" href="https://laravel.com/">Laravel</a> to facilitate the website development.
-    			                One of the most interesting aspects of this framework is its built-in security features.
+                                On m'a chargé de construire la partie back-end du site.
+    			                J'ai choisi d'utiliser le framework PHP <a target="_blank" href="https://laravel.com/">Laravel</a>
+                                pour m'aider dans le développement du site. Ce framework permet notamment de sécuriser plus facilement
+                                et plus efficacement les sites web.
     			            </p>
-    						<p>I also worked on the entire back office (front-end included) by using the <a href="http://getbootstrap.com/">Bootstrap</a> framework.</p>
+    						<p>Je me suis également occupé du back-office dans son intégralité, en utilisant notamment le framework <a href="http://getbootstrap.com/">Bootstrap</a> pour la partie front-end.</p>
     						<div>
-    							<a href="assets/braco1.png" data-caption="The website's back office" data-fancybox="braco" ><img class="img-thumbnail" src="assets/braco1.png" width="150"/></a>
-    							<a href="assets/braco2.png"  data-caption="The website's back office" data-fancybox="braco"><img class="img-thumbnail" src="assets/braco2.png" width="150"/></a>
-    							<a href="assets/braco3.png"  data-caption="Searching with advanced criteria" data-fancybox="braco"><img class="img-thumbnail" src="assets/braco3.png" width="150"/></a>
+    							<a href="assets/braco1.png" data-caption="Le back-office du site" data-fancybox="braco" ><img class="img-thumbnail" src="assets/braco1.png" width="150"/></a>
+    							<a href="assets/braco2.png"  data-caption="Le back-office du site" data-fancybox="braco"><img class="img-thumbnail" src="assets/braco2.png" width="150"/></a>
+    							<a href="assets/braco3.png"  data-caption="Recherche avec des critères avancés" data-fancybox="braco"><img class="img-thumbnail" src="assets/braco3.png" width="150"/></a>
     						</div>
                         </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-header collapsed" id="airbus" data-toggle="collapse" data-target="#collapse3">
-                        <div>Dynamic web interface at Airbus</div>
+                        <div>Interface web dynamique à Airbus</div>
                         <div class="text-secondary">2016</div>
                         <div>
                             <span class="badge badge-primary">HTML</span>
@@ -179,16 +184,15 @@
                     <div id="collapse3" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExperience">
                         <div class="card-body">
                             <p>
-    							I was employed at Airbus for a 3-month internship, in which I worked on a project to simplify
-    							a document used by technical operators. This document
-    							was transformed from a Word file to an HTML file, using the possibilities offered by this type of
-    							document: imports from other files, dynamic content adapted to the experience of each operator,
-    							overall accessibility. A Word-like program was chosen for the employees to write the contents of
-    							the HTML file.
+    							J'ai effectué un stage de 3 mois au sein d'Airbus, dans lequel j'ai travaillé sur un projet qui consistait
+                                à simplifier un document de travail utilisé par des opérateurs techniques. Ce document est passé d’un fichier
+                                Word à un fichier HTML, en utilisant les possibilités offertes par ce format de document : inclusion de d’autres
+                                fichiers, contenu dynamique et adapté à l’expérience de l’opérateur, meilleur visuel. Les employés utilisaient
+                                un programme semblable à Microsoft Word pour écrire le contenu du document.
     						</p>
     						<p>
-    							This internship gave me an understanding of the corporate world.
-    							I used the technical and social skills acquired during my DUT to conduct the project.
+    							Ce stage m’a donné un premier aperçu du monde de l’entreprise. J'ai pu utiliser les compétences techniques
+                                et relationnelles acquises au cours de mon DUT pour mener à bien le projet.
     						</p>
                         </div>
                     </div>
@@ -198,10 +202,10 @@
     </section>
     <section id="skills" class="jumbotron jumbotron-fluid">
         <div class="container icon-skills">
-            <h2>Skills</h2>
+            <h2>Compétences</h2>
             <div class="row align-items-center">
                 <div class="col-md-3">
-                    <h5>Software development</h5>
+                    <h5>Développement logiciel</h5>
                 </div>
                 <div class="col-md-9">
                     <span class="icon"><i class="devicon-java-plain-wordmark" data-toggle="tooltip" title="Java"></i><span>★★</span></span>
@@ -212,7 +216,7 @@
             </div>
             <div class="row align-items-center">
                 <div class="col-md-3">
-                    <h5>Front-end web dev.</h5>
+                    <h5>Dév. web front-end</h5>
                 </div>
                 <div class="col-md-9">
                     <span class="icon"><i class="devicon-html5-plain-wordmark" data-toggle="tooltip" title="HTML"></i><span>★★★</span></span>
@@ -226,7 +230,7 @@
             </div>
             <div class="row align-items-center">
                 <div class="col-md-3">
-                    <h5>Back-end web dev.</h5>
+                    <h5>Dév. web back-end</h5>
                 </div>
                 <div class="col-md-9">
                     <span class="icon"><i class="devicon-php-plain" data-toggle="tooltip" title="PHP"></i><span>★★</span></span>
@@ -236,7 +240,7 @@
             </div>
             <div class="row align-items-center">
                 <div class="col-md-3">
-                    <h5>Tools</h5>
+                    <h5>Outils</h5>
                 </div>
                 <div class="col-md-9">
                     <span class="icon"><i class="devicon-linux-plain" data-toggle="tooltip" title="Bash"></i><span>★★</span></span>
@@ -248,20 +252,20 @@
             </div>
             <div class="row align-items-center">
                 <div class="col-md-3">
-                    <h5>Languages</h5>
+                    <h5>Langues</h5>
                 </div>
                 <div class="col-md-9">
                     <span class="icon">
                         <img src="assets/fr.svg" data-toggle="tooltip" title="Français"></img>
-                        <span data-toggle="tooltip" data-placement="bottom" title="First language">★★★</span>
+                        <span data-toggle="tooltip" data-placement="bottom" title="Langue maternelle">★★★</span>
                     </span>
                     <span class="icon">
                         <img src="assets/uk.svg" data-toggle="tooltip" title="English"></img>
-                        <span data-toggle="tooltip" data-placement="bottom" title="Very good communication skills">★★★</span>
+                        <span data-toggle="tooltip" data-placement="bottom" title="Courant et technique">★★★</span>
                     </span>
                     <span class="icon">
                         <img src="assets/jp.svg" data-toggle="tooltip" title="日本語"></img>
-                        <span data-toggle="tooltip" data-placement="bottom" title="JLPT N4 level">★</span>
+                        <span data-toggle="tooltip" data-placement="bottom" title="Niveau JLPT N4">★</span>
                     </span>
                 </div>
             </div>
@@ -273,7 +277,7 @@
             <div class="accordion" id="accordionProjects">
                 <div class="card">
                     <div class="card-header" id="pres" data-toggle="collapse" data-target="#collapse10">
-                        <div>Presentation website</div>
+                        <div>Site de présentation</div>
                         <div class="text-secondary">2018</div>
                         <div>
                             <span class="badge badge-primary">HTML</span>
@@ -284,18 +288,18 @@
                     <div id="collapse10" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionProjects">
                         <div class="card-body">
                             <p>
-                                I have been working on the current version of this website since june 2018, by adding new projects and experiences.
-                                I have used parts of my previous presentation website and I have focused on the important pieces of information.
+                                J'ai travaillé sur la version actuelle de ce site web depuis juin 2018, en ajoutant régulièrement de nouveau projets et expériences.
+                                J'ai utilisé certaines parties du précédent site web et je me suis focalisé sur les informations importantes.
                             </p>
                             <p>
-                                This website is <a href="https://github.com/vincentfougeras/vincentfougeras.github.io">hosted on GitHub Pages</a>.
+                                Ce site est <a href="https://github.com/vincentfougeras/vincentfougeras.github.io">hébergé sur GitHub Pages</a>.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-header collapsed" id="fullscreen" data-toggle="collapse" data-target="#collapse11">
-                        <div>Fullscreen image on hover</div>
+                        <div>Image en plein écran</div>
                         <div class="text-secondary">2017</div>
                         <div>
                             <span class="badge badge-primary">CSS</span>
@@ -305,8 +309,8 @@
                     <div id="collapse11" class="collapse" aria-labelledby="headingOne" data-parent="#accordionProjects">
                         <div class="card-body">
                             <p>
-                                I developped a small code (HTML, CSS, Javascript) which displays a fullscreen image when the mouse is hovering over some text.
-                                <a href="fullscreen/index.html">A demo website</a> has been made to show off this code.
+                                J'ai développé un code (HTML, CSS, Javascript) permettant d'afficher une image en plein écran lorsque la souris passe au dessus d'un texte.
+                                <a href="fullscreen/index.html">Un site de démonstration</a> a été créé pour présenter ce code.
                             </p>
                         </div>
                     </div>
@@ -321,13 +325,12 @@
                     </div>
                     <div id="collapse12" class="collapse" aria-labelledby="headingOne" data-parent="#accordionProjects">
                         <div class="card-body">
-                            <p>Dream Catcher is an Android application used to write our dreams. It is similar to any note-taking app, but it has additional functionalities helping the user to write their dreams.</p>
+                            <p>Dream Catcher est une application Android destinée à écrire nos rêves. Elle est similaire à une application pour prendre des notes, mais possède des fonctionnalités additionnelles spécifiques à l'écriture des rêves.</p>
     						<div>
-    							<a href="assets/dream-en1.png"
-    							data-caption="The main screen containing the list of dreams. We can search through dreams with keywords, or sort the list by date or by name." data-fancybox="dream" ><img class="img-thumbnail" src="assets/dream-en1.png" width="120"/></a>
-    							<a href="assets/dream-en2.png"  data-caption="We can add a new dream, with an optional title." data-fancybox="dream"><img class="img-thumbnail" src="assets/dream-en2.png" width="120"/></a>
-    							<a href="assets/dream-en3.png"  data-caption="We can access the details of a dream, modify it, delete it, or share it." data-fancybox="dream"><img class="img-thumbnail" src="assets/dream-en3.png" width="120"/></a>
-    							<a href="assets/dream-en4.png"  data-caption="We can apply a theme adapted to the night, and get a reminder in the middle of the night." data-fancybox="dream"><img class="img-thumbnail" src="assets/dream-en4.png" width="120"/></a>
+    							<a href="assets/dream-en1.png" data-caption="L'écran principal comportant la liste des rêves. On peut rechercher un rêve par mot-clef ou trier la liste selon différents critères." data-fancybox="dream" ><img class="img-thumbnail" src="assets/dream-en1.png" width="120"/></a>
+    							<a href="assets/dream-en2.png" data-caption="On peut ajouter un nouveau rêve, avec un titre optionnel." data-fancybox="dream"><img class="img-thumbnail" src="assets/dream-en2.png" width="120"/></a>
+    							<a href="assets/dream-en3.png" data-caption="On peut voir les détails d'un rêve, le modifier, le supprimer, ou le partager." data-fancybox="dream"><img class="img-thumbnail" src="assets/dream-en3.png" width="120"/></a>
+    							<a href="assets/dream-en4.png" data-caption="On peut appliquer un thème adapté à la nuit, et demander à recevoir un rappel pendant la nuit." data-fancybox="dream"><img class="img-thumbnail" src="assets/dream-en4.png" width="120"/></a>
     						</div>
                         </div>
                     </div>
@@ -338,7 +341,7 @@
                         <div class="text-secondary">2017</div>
                         <div>
                             <span class="badge badge-primary">Java</span>
-                            <span class="badge badge-primary">GUI</span>
+                            <span class="badge badge-primary">Interface graphique</span>
                         </div>
                     </div>
                     <div id="collapse13" class="collapse" aria-labelledby="headingOne" data-parent="#accordionProjects">
@@ -346,9 +349,10 @@
                             <div class="d-sm-flex flex-row">
     							<a href="assets/n7tris.png" data-caption="The main menu screen" data-fancybox="n7tris"><img class="img-thumbnail" src="assets/n7tris.png"/></a>
     							<p>
-    								n7tris is a Tetris game with multiple game modes (Classic, Colors, Puzzle, Tricky Tower), which diversifies the gameplay.
-                                    I worked on n7tris in a team of 7 people, and I focused mainly on the game menus. As with the application to manage assignation
-                                    of projects, we used Swing for the user interface, and Agile SCRUM and SVN for the project management.
+    								n7tris est un jeu de Tetris présentant plusieurs modes de jeu (Classique, Couleurs, Puzzle, Tricky Tower),
+                                    ce qui permet de varier l'expérience de jeu. J'ai travaillé sur n7tris au sein d'un groupe de 7 personnes,
+                                    et je me suis concentré sur les menus du jeu. De même que pour le logiciel de gestion des projets tutorés,
+                                    nous avons utilisé Swing pour l'interface graphique, et Agile SCRUM et SVN pour la gestion de projet.
     							</p>
     						</div>
                         </div>
@@ -356,28 +360,28 @@
                 </div>
                 <div class="card">
                     <div class="card-header collapsed" id="shell" data-toggle="collapse" data-target="#collapse14">
-                        <div>Shell implementation</div>
+                        <div>Implémentation du shell</div>
                         <div class="text-secondary">2017</div>
                         <div>
                             <span class="badge badge-primary">C</span>
-                            <span class="badge badge-primary">System programming</span>
+                            <span class="badge badge-primary">Programmation système</span>
                         </div>
                     </div>
                     <div id="collapse14" class="collapse" aria-labelledby="headingOne" data-parent="#accordionProjects">
                         <div class="card-body">
-                            <p>I implemented a shell which works similar to the <a href="https://en.wikipedia.org/wiki/Bourne_shell">Bourne Shell</a>. Thus this shell can :</p>
+                            <p>J'ai implémenté un shell dont le fonctionnement est similaire au <a href="https://en.wikipedia.org/wiki/Bourne_shell">Bourne Shell</a>. Ainsi, ce shell peut :</p>
     						<ul>
-    							<li>execute external commands (ls, pwd ...)</li>
-    							<li>execute internal commands (cd, jobs ...)</li>
-    							<li>handle suspension, interuption, launching background processes</li>
-    							<li>handle redirection and pipelines</li>
+    							<li>exécuter des commandes externes (ls, pwd ...)</li>
+    							<li>exécuter des commandes internes au shell (cd, jobs ...)</li>
+    							<li>gérer la suspension, l'interuption, le lancement de processus en tâche de fond</li>
+    							<li>gérer les redirections et les tubes de communication</li>
     						</ul>
                         </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-header collapsed" id="shell" data-toggle="collapse" data-target="#collapse15">
-                        <div>Presentation website (previous)</div>
+                        <div>Site de présentation (précédent)</div>
                         <div class="text-secondary">2016-2017</div>
                         <div>
                             <span class="badge badge-primary">PHP</span>
@@ -387,19 +391,20 @@
                     </div>
                     <div id="collapse15" class="collapse" aria-labelledby="headingOne" data-parent="#accordionProjects">
                         <div class="card-body">
-                            <p>I have made a presentation website showing the work I have done for 3 years.</p>
-                            <p>This website was mainly coded by hand, without using frameworks, and included a contact form for users to send me emails.</p>
+                            <p>J'ai créé un site pour présenter le travail que j'ai effectué en 3 ans.</p>
+                            <p>Ce site était principalement codé à la main, sans utiliser de framework, et comportait
+                               un formulaire de contact permettant aux utilisateurs de m'envoyer des emails.</p>
                             <div>
     							<a href="assets/pres1.png"
     							data-caption="Website header"
                                 data-fancybox="pres" ><img class="img-thumbnail" src="assets/pres1.png" width="120"/></a>
-    							<a href="assets/pres2.png"  data-caption="Skills section" data-fancybox="pres">
+    							<a href="assets/pres2.png"  data-caption="Section Compétences" data-fancybox="pres">
                                     <img class="img-thumbnail" src="assets/pres2.png" width="120"/></a>
-    							<a href="assets/pres3.png"  data-caption="Experience section" data-fancybox="pres">
+    							<a href="assets/pres3.png"  data-caption="Section Expérience" data-fancybox="pres">
                                     <img class="img-thumbnail" src="assets/pres3.png" width="120"/></a>
-    							<a href="assets/pres4.png"  data-caption="Contact section"
+    							<a href="assets/pres4.png"  data-caption="Section Contact"
                                     data-fancybox="pres"><img class="img-thumbnail" src="assets/pres4.png" width="120"/></a>
-                                <a href="assets/pres5.png"  data-caption="Responsive design and projects section"
+                                <a href="assets/pres5.png"  data-caption="Section Projets et responsive design"
                                     data-fancybox="pres"><img class="img-thumbnail" src="assets/pres5.png" width="120"/></a>
     						</div>
                         </div>
@@ -407,41 +412,43 @@
                 </div>
                 <div class="card">
                     <div class="card-header collapsed" id="ecommerce" data-toggle="collapse" data-target="#collapse16">
-                        <div>E-commerce website</div>
+                        <div>Site d'e-commerce</div>
                         <div class="text-secondary">2016</div>
                         <div>
                             <span class="badge badge-primary">PHP</span>
-                            <span class="badge badge-primary">MVC pattern</span>
+                            <span class="badge badge-primary">Patron d'architecture MVC</span>
                         </div>
                     </div>
                     <div id="collapse16" class="collapse" aria-labelledby="headingOne" data-parent="#accordionProjects">
                         <div class="card-body">
-                            <p>I implemented with a co-worker the back-office part of an e-commerce website. The user can create, update, or delete products/categories of products.</p>
-                            <p>We learned object oriented programmation (MVC2 compliant) in PHP.</p>
+                            <p>Nous avons réalisé dans un groupe de deux personnes la partie back-office d'un site d'e-commerce.
+                               L'utilisateur a la possibilité de créer, modifier, supprimer des produits et des catégories de produits.</p>
+                            <p>Nous avons appris la programmation orientée objet MVC2 en PHP.</p>
                         </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-header collapsed" id="ecommerce" data-toggle="collapse" data-target="#collapse17">
-                        <div>Encryption program</div>
+                        <div>Programmes de chiffrement</div>
                         <div class="text-secondary">2015-2016</div>
                         <div>
                             <span class="badge badge-primary">Python</span>
-                            <span class="badge badge-primary">Cryptographic systems</span>
+                            <span class="badge badge-primary">Systèmes cryptographiques</span>
                         </div>
                     </div>
                     <div id="collapse17" class="collapse" aria-labelledby="headingOne" data-parent="#accordionProjects">
                         <div class="card-body">
                             <p>
-                                I studied various cryptographic systems within a 4 member team. Four systems have been studied : Cesar, Vigenere, Vernam and RSA.
-                                I realized Python programs to cipher and decipher messages using the Cesar and the Vigenere methods.
+                                J'ai étudié différents systèmes cryptographiques dans une équipe de 4 personnes.
+                                Quatres systèmes ont été étudiés : César, Vigenère, Vernam et RSA. J'ai réalisé des programmes
+                                en Python permettant de chiffrer et de déchiffrer des messages selon les méthodes de César et de Vigenère.
                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-header collapsed" id="ecommerce" data-toggle="collapse" data-target="#collapse18">
-                        <div>Project management app</div>
+                        <div>Logiciel de gestion de projets</div>
                         <div class="text-secondary">2015</div>
                         <div>
                             <span class="badge badge-primary">Java</span>
@@ -453,14 +460,15 @@
                     </div>
                     <div id="collapse18" class="collapse" aria-labelledby="headingOne" data-parent="#accordionProjects">
                         <div class="card-body">
-                            <p>We conceived a software to manage the projects of the IUT : adding subjects, creating teams of students, associate subjects and teams ...</p>
-                            <p>We used a variety of tools and methods for this project :
+                            <p>Nous avons conçu un logicel permettant de gérer les projets tutorés : ajout de sujets,
+                                création des groupes d'étudiants, assignation des projets aux groupes ...</p>
+                            <p>Nous avons utilisé un ensemble d'outils et de méthodes pour mettre à bien ce projet :
                             </p>
                             <ul>
-                                <li>Unit tests in Java with JUnit</li>
-                                <li>Agile SCRUM method</li>
-                                <li>Source versionning with SVN</li>
-                                <li>Documentation with AsciiDoc</li>
+                                <li>Tests unitaires en Java avec JUnit</li>
+                                <li>Méthode agile SCRUM</li>
+                                <li>Versionnement de projet avec SVN</li>
+                                <li>Documentation avec AsciiDoc</li>
     						</p>
                         </div>
                     </div>
@@ -470,7 +478,7 @@
     </section>
     <footer>
         <div class="container">
-            <h3><a href="mailto:fougeras.vincent@gmail.com">Contact me</h3>
+            <h3><a href="mailto:fougeras.vincent@gmail.com">Contactez moi</h3>
             <hr/>
             <p><a href="#">Vincent Fougeras</a></p>
             <div>Flag icons designed by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
