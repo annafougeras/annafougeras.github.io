@@ -181,7 +181,7 @@ h2 {
     font-weight: 900;
 
     float: right;
-    color: #222;
+    color: #4c68a8;
 }
 .accordion .card-header:not(.collapsed):after {
     content: "\f078";
@@ -190,7 +190,7 @@ h2 {
     content: "\f054";
 }
 .card-header .badge-primary {
-    background-color: #415688;
+    background-color: #4c68a8;
     font-size: 0.85em;
     font-weight: 500;
 }
@@ -200,12 +200,37 @@ h2 {
         display: inline;
     }
     .card-header .text-secondary {
-        margin-left: 1rem;
+        margin-left: 1.5rem;
         margin-right: 2rem;
     }
 }
 .card-header div:last-child {
     display: inline-block;
+}
+
+
+.accordion .card {
+    border: none;
+}
+.accordion .card:not(:last-child) {
+    border-bottom : 1px solid rgba(0,0,0,.125) !important;
+}
+.accordion .card-header {
+    border: none;
+    background: inherit;
+}
+.card-header div:first-child {
+    font-family: 'Hammersmith One', sans;
+    font-weight: lighter;
+    font-size: 1.1em;
+    color: #4c68a8;
+}
+.card-header:hover {
+    background-color: #f7f7f7;
+    cursor: pointer;
+}
+.badge {
+    padding: .3em .5em;
 }
 
 /*
@@ -222,7 +247,7 @@ h2 {
     padding-bottom : 2rem;
 }
 #experience h2, #projects h2 {
-    color: #415688;
+    color: #4c68a8;
 }
 
 /*
