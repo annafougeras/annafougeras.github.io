@@ -14,7 +14,7 @@ body {
 .sticky-top {
     top: -1;
 }
-#navbar-scroll {
+#navbar {
     background: linear-gradient(to right, #99afe8, #4166b2);
 }
 .nav-link {
@@ -209,6 +209,7 @@ h2 {
     background-color: #4c68a8;
     font-size: 0.85em;
     font-weight: 500;
+    margin-right: .3em;
 }
 
 @media (min-width: 576px) {

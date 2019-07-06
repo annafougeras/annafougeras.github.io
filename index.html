@@ -19,16 +19,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
 
     <link rel="stylesheet" href="styles.css" />
-	<script src="scripts.js"></script>
+    <script src="lib/vue.min.js"></script>
 
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
     <title>Vincent Fougeras</title>
 </head>
 <body data-spy="scroll" data-offset="71" data-target="#navbar-scroll">
-    <header class="jumbotron jumbotron-fluid">
+    <header id="header" class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1>Vincent Fougeras</h1>
-            <p class="lead">Etudiant en informatique</p>
+            <p class="lead">{{ title }}</p>
             <hr class="my-4">
             <p class="header-icons">
                 <a href="https://github.com/vincentfougeras/" target="_blank"><img src="assets/github.png" alt="Github"/></a>
@@ -36,7 +36,7 @@
 			</p>
         </div>
     </header>
-    <nav id="navbar-scroll" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark shadow-lg p-3 mb-5">
+    <nav id="navbar" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark shadow-lg p-3 mb-5">
         <div class="container">
             <a class="navbar-brand" href="#">Vincent Fougeras</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-scroll-collapse"
@@ -45,178 +45,47 @@
             </button>
             <div class="collapse navbar-collapse" id="navbar-scroll-collapse">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">Expérience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Compétences</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projets</a>
+                    <li v-for="(section, sectionID, _) in sections" class="nav-item">
+                        <a class="nav-link" :href="'#' + sectionID">{{ section }}</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="assets/CV_FOUGERAS_Vincent.pdf">CV</a>
+                        <a class="nav-link" :href="resume.href">{{ resume.title }}</a>
                     </li>
                     <li class="nav-item language d-none d-md-inline">
-                        <a class="nav-link" href="index-en.html"><img src="assets/uk.svg"/></a>
+                        <a class="nav-link" :href="language.href"><img :src="language.flag"/></a>
                     </li>
                     <li class="nav-item d-block d-md-none">
-                        <a class="nav-link" href="index-en.html">English</a>
+                        <a class="nav-link" :href="language.href">{{ language.title }}</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <section id="description">
-        <div class="container">
-            <p>Je suis passioné par les nouvelles technologies et le futur de l'informatique.</p>
-            <p>Je suis étudiant en <a href="https://masterihm.fr">Master IHM</a> à l'université Toulouse Paul Sabatier.
-                J'ai effectué un DUT informatique et une L3 informatique, qui m'ont permis d'en apprendre beaucoup sur le développement de logiciels,
-                la gestion de bases de données et l'administration système. J'ai hâte de pouvoir approfondir mes connaissances dans la conception d'IHM
-                à l'université Paul Sabatier.</p>
-            <p>J'apprécie particulièrement le travail en équipe mais je suis également capable de travailler en autonomie.
-               J'ai réalisé de nombreux projets informatiques, au cours desquels j'ai utilisé mes compétences pour arriver au meilleur résultat.</p>
+        <div class="container" v-html="description">
         </div>
     </section>
     <section id="resume" class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h2><a href="assets/CV_FOUGERAS_Vincent.pdf">Télécharger mon CV</a></h2>
+            <h2><a :href="cvAsset">{{ cvText }}</a></h2>
         </div>
     </section>
     <section id="experience">
         <div class="container">
             <h2>Expérience</h2>
             <div class="accordion" id="accordionExperience">
-                <div class="card">
-                    <div class="card-header collapsed" id="blevrault" data-toggle="collapse" data-target="#collapse5">
-                        <div>Conception de parcours de visite personnalisés à Berger-Levrault</div>
-                        <div class="text-secondary">2019</div>
+                <div v-for="(exp, index) in experiences" class="card" :key="index">
+                    <div class="card-header" :class="{ collapsed: index !== 1 }" :id="exp.id" data-toggle="collapse" :data-target="'#collapse' + exp.id">
+                        <div>{{ exp.title }}</div>
+                        <div class="text-secondary">{{ exp.year }}</div>
                         <div>
-                            <span class="badge badge-primary">IHM</span>
-                            <span class="badge badge-primary">...</span>
+                            <span v-for="skill in exp.skills" class="badge badge-primary">{{ skill }}</span>
                         </div>
                     </div>
-                    <div id="collapse5" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExperience">
-                        <div class="card-body">
-                            <p>
-                                Je vais effectuer un stage en conception IHM de 4 mois dans une équipe de R&D
-                                au sein de <a href="https://www.berger-levrault.com/">Berger-Levrault</a>.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="celad" data-toggle="collapse" data-target="#collapse0">
-                        <div>Application web de monitoring à CELAD</div>
-                        <div class="text-secondary">2018</div>
-                        <div>
-                            <span class="badge badge-primary">Angular</span>
-                            <span class="badge badge-primary">Sass</span>
-                            <span class="badge badge-primary">Flask</span>
-                            <span class="badge badge-primary">SocketIO</span>
-                        </div>
-                    </div>
-                    <div id="collapse0" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExperience">
-                        <div class="card-body">
-                            <p>
-                                J'ai effectué un stage de 3 mois chez <a href="https://www.celad.com/">CELAD</a>, dans lequel j'ai développé une application web
-                                visant à suivre en temps réel l'avancée de campagnes de test.</p>
-                            <p>
-                                La partie front-end de l'application utilisait le framework <a href="https://angular.io">Angular</a>, une technologie moderne
-                                pour le web. J'ai utilisé différentes librairies comme <a href="https://akveo.github.io/nebular/">Nebular</a> et
-                                <a href="https://github.com/ngrx/platform">@ngrx</a> afin d'obtenir une application dynamique et réactive.
-                            </p>
-                            <p>
-                                Pour la partie back-end, j'ai utilisé le framework Python <a href="http://flask.pocoo.org/">Flask</a>, choisi pour sa légèreté,
-                                et j'ai utilisé <a href="https://socket.io/">SocketIO</a> pour gérer la communication entre le front-end et le back-end.
-                            </p>
-                            <div>
-    							<a href="assets/celad1.png" data-caption="Vue d'ensemble de tous les bancs de test" data-fancybox="celad" ><img class="img-thumbnail" src="assets/celad1.png" width="150"/></a>
-    							<a href="assets/celad2.png" data-caption="Les détails d'un banc de test, avec la campagne en cours d'exécution" data-fancybox="celad"><img class="img-thumbnail" src="assets/celad2.png" width="150"/></a>
-    							<a href="assets/celad3.png" data-caption="On peut accéder aux pièces jointes d'une campagne" data-fancybox="celad"><img class="img-thumbnail" src="assets/celad3.png" width="150"/></a>
-                                <a href="assets/celad4.png" data-caption="L'outil de construction de campagnes" data-fancybox="celad"><img class="img-thumbnail" src="assets/celad4.png" width="150"/></a>
-    						</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header collapsed" id="cottage" data-toggle="collapse" data-target="#collapse1">
-                        <div>Site web Gîte du Coutelier</div>
-                        <div class="text-secondary">2017-2018</div>
-                        <div>
-                            <span class="badge badge-primary">Laravel</span>
-                            <span class="badge badge-primary">Stripe</span>
-                        </div>
-                    </div>
-                    <div id="collapse1" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExperience">
-                        <div class="card-body">
-                            <p>
-                                J'ai créé un site de promotion d'un gîte, appelé <a href="https://giteducoutelier.fr" target="_blank">Gîte du Coutelier</a>.
-                                Il est possible de faire des réservations directement sur le site, grâce à
-                                <a href="https://stripe.com" target="_blank">Stripe</a>, un module de paiement sécurisé.
-                            </p>
-                            <p>
-                                Le site comporte également une section où les clients peuvent laisser un avis,
-                                et une section dans laquelle les administrateurs du site peuvent présenter des activités qui ont lieu autour du gîte.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header collapsed" id="braco" data-toggle="collapse" data-target="#collapse2">
-                        <div>Site web Braco</div>
-                        <div class="text-secondary">2016</div>
-                        <div>
-                            <span class="badge badge-primary">PHP</span>
-                            <span class="badge badge-primary">Laravel</span>
-                            <span class="badge badge-primary">Bootstrap</span>
-                        </div>
-                    </div>
-                    <div id="collapse2" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExperience">
-                        <div class="card-body">
-                            <p>
-    							J'ai travaillé sur le site web Braco pendant l'été 2016. Il s'agissait d'un site servant à comparer et noter les marques de vêtements.
-    			            <p>
-                                On m'a chargé de construire la partie back-end du site.
-    			                J'ai choisi d'utiliser le framework PHP <a target="_blank" href="https://laravel.com/">Laravel</a>
-                                pour m'aider dans le développement du site. Ce framework permet notamment de sécuriser plus facilement
-                                et plus efficacement les sites web.
-    			            </p>
-    						<p>Je me suis également occupé du back-office dans son intégralité, en utilisant notamment le framework <a href="http://getbootstrap.com/">Bootstrap</a> pour la partie front-end.</p>
-    						<div>
-    							<a href="assets/braco1.png" data-caption="Le back-office du site" data-fancybox="braco" ><img class="img-thumbnail" src="assets/braco1.png" width="150"/></a>
-    							<a href="assets/braco2.png"  data-caption="Le back-office du site" data-fancybox="braco"><img class="img-thumbnail" src="assets/braco2.png" width="150"/></a>
-    							<a href="assets/braco3.png"  data-caption="Recherche avec des critères avancés" data-fancybox="braco"><img class="img-thumbnail" src="assets/braco3.png" width="150"/></a>
-    						</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header collapsed" id="airbus" data-toggle="collapse" data-target="#collapse3">
-                        <div>Interface web dynamique à Airbus</div>
-                        <div class="text-secondary">2016</div>
-                        <div>
-                            <span class="badge badge-primary">HTML</span>
-                            <span class="badge badge-primary">CSS</span>
-                            <span class="badge badge-primary">jQuery</span>
-                        </div>
-                    </div>
-                    <div id="collapse3" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExperience">
-                        <div class="card-body">
-                            <p>
-    							J'ai effectué un stage de 3 mois au sein d'Airbus, dans lequel j'ai travaillé sur un projet qui consistait
-                                à simplifier un document de travail utilisé par des opérateurs techniques. Ce document est passé d’un fichier
-                                Word à un fichier HTML, en utilisant les possibilités offertes par ce format de document : inclusion de d’autres
-                                fichiers, contenu dynamique et adapté à l’expérience de l’opérateur, meilleur visuel. Les employés utilisaient
-                                un programme semblable à Microsoft Word pour écrire le contenu du document.
-    						</p>
-    						<p>
-    							Ce stage m’a donné un premier aperçu du monde de l’entreprise. J'ai pu utiliser les compétences techniques
-                                et relationnelles acquises au cours de mon DUT pour mener à bien le projet.
-    						</p>
-                        </div>
+                    <div :id="'collapse' + exp.id" class="collapse" :class="{ show: index === 1 }" aria-labelledby="headingOne" data-parent="#accordionExperience">
+                        <div class="card-body" v-html="exp.description"></div>
                     </div>
                 </div>
             </div>
@@ -224,70 +93,25 @@
     </section>
     <section id="skills" class="jumbotron jumbotron-fluid">
         <div class="container icon-skills">
-            <h2>Compétences</h2>
-            <div class="row align-items-center">
+            <h2>{{ title }}</h2>
+            <div v-for="(category, categoryID, _) in categories" class="row align-items-center">
                 <div class="col-md-3">
-                    <h5>Développement logiciel</h5>
+                    <h5>{{ category }}</h5>
                 </div>
                 <div class="col-md-9">
-                    <span class="icon"><i class="devicon-java-plain-wordmark" data-toggle="tooltip" title="Java"></i><span>★★</span></span>
-                    <span class="icon"><i class="devicon-c-plain-wordmark" data-toggle="tooltip" title="C"></i><span>★★★</span></span>
-                    <span class="icon"><i class="devicon-python-plain-wordmark" data-toggle="tooltip" title="Python"></i><span>★★</span></span>
-                    <span class="icon"><i class="devicon-android-plain-wordmark" data-toggle="tooltip" title="Android"></i><span>★★</span></span>
+                    <span v-for="skill in skills[categoryID]" class="icon">
+                        <i :class="skill.class" data-toggle="tooltip" :title="skill.title"></i><span>{{ skill.stars }}</span></span>
                 </div>
             </div>
+
             <div class="row align-items-center">
                 <div class="col-md-3">
-                    <h5>Dév. web front-end</h5>
+                    <h5>{{ languageTitle }}</h5>
                 </div>
                 <div class="col-md-9">
-                    <span class="icon"><i class="devicon-html5-plain-wordmark" data-toggle="tooltip" title="HTML"></i><span>★★★</span></span>
-                    <span class="icon"><i class="devicon-bootstrap-plain-wordmark" data-toggle="tooltip" title="Bootstrap"></i><span>★★★</span></span>
-                    <span class="icon"><i class="devicon-css3-plain-wordmark" data-toggle="tooltip" title="CSS"></i><span>★★</span></span>
-                    <span class="icon"><i class="devicon-sass-original" data-toggle="tooltip" title="Sass"></i><span>★★</span></span>
-                    <span class="icon"><i class="devicon-javascript-plain" data-toggle="tooltip" title="JavaScript"></i><span>★★</span></span>
-                    <span class="icon"><i class="devicon-jquery-plain-wordmark" data-toggle="tooltip" title="jQuery"></i><span>★★</span></span>
-                    <span class="icon"><i class="devicon-angularjs-plain" data-toggle="tooltip" title="Angular"></i><span>★★</span></span>
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-3">
-                    <h5>Dév. web back-end</h5>
-                </div>
-                <div class="col-md-9">
-                    <span class="icon"><i class="devicon-php-plain" data-toggle="tooltip" title="PHP"></i><span>★★</span></span>
-                    <span class="icon"><i class="devicon-laravel-plain-wordmark" data-toggle="tooltip" title="Laravel"></i><span>★★★</span></span>
-                    <span class="icon"><i class="devicon-mysql-plain-wordmark" data-toggle="tooltip" title="MySQL"></i><span>★★</span></span>
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-3">
-                    <h5>Outils</h5>
-                </div>
-                <div class="col-md-9">
-                    <span class="icon"><i class="devicon-linux-plain" data-toggle="tooltip" title="Bash"></i><span>★★</span></span>
-                    <span class="icon"><i class="devicon-git-plain-wordmark" data-toggle="tooltip" title="Git"></i><span>★★</span></span>
-                    <span class="icon"><i class="devicon-inkscape-plain-wordmark" data-toggle="tooltip" title="Inkscape"></i><span>★</span></span>
-                    <span class="icon"><i class="devicon-phpstorm-plain-wordmark" data-toggle="tooltip" title="PHPStorm"></i><span>★★</span></span>
-                    <span class="icon"><i class="devicon-pycharm-plain-wordmark" data-toggle="tooltip" title="PyCharm"></i><span>★</span></span>
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-3">
-                    <h5>Langues</h5>
-                </div>
-                <div class="col-md-9">
-                    <span class="icon">
-                        <img src="assets/fr.svg" data-toggle="tooltip" title="Français"></img>
-                        <span data-toggle="tooltip" data-placement="bottom" title="Langue maternelle">★★★</span>
-                    </span>
-                    <span class="icon">
-                        <img src="assets/uk.svg" data-toggle="tooltip" title="English"></img>
-                        <span data-toggle="tooltip" data-placement="bottom" title="Courant et technique">★★★</span>
-                    </span>
-                    <span class="icon">
-                        <img src="assets/jp.svg" data-toggle="tooltip" title="日本語"></img>
-                        <span data-toggle="tooltip" data-placement="bottom" title="Niveau JLPT N4">★</span>
+                    <span v-for="lang in languages" class="icon">
+                        <img :src="lang.flag" data-toggle="tooltip" :title="lang.title"></img>
+                        <span data-toggle="tooltip" data-placement="bottom" :title="lang.tip">{{ lang.stars }}</span>
                     </span>
                 </div>
             </div>
@@ -295,238 +119,41 @@
     </section>
     <section id="projects">
         <div class="container">
-            <h2>Projets</h2>
+            <h2>{{ title }}</h2>
             <div class="accordion" id="accordionProjects">
-                <div class="card">
-                    <div class="card-header" id="bionotes" data-toggle="collapse" data-target="#collapse9">
-                        <div>BioNotes</div>
-                        <div class="text-secondary">2019</div>
+                <div v-for="(project, index) in projects" class="card">
+                    <div class="card-header" :class="{ collapsed: index !== 0 }" :id="project.id" data-toggle="collapse" :data-target="'#collapse' + project.id">
+                        <div>{{ project.title }}</div>
+                        <div class="text-secondary">{{ project.year }}</div>
                         <div>
-                            <span class="badge badge-primary">Angular</span>
-                            <span class="badge badge-primary">Ionic</span>
+                            <span v-for="skill in project.skills" class="badge badge-primary">{{ skill }}</span>
                         </div>
                     </div>
-                    <div id="collapse9" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionProjects">
-                        <div class="card-body">
-                            <p>
-                                <a href="https://github.com/LeJardinDesSaisons/BioNotes">BioNotes</a> est une application mobile
-                                pour le suivi d'une parcelle de maraîchage bio. Elle permet la gestion des espaces de plantation
-                                et le traçage des opérations effectuées sur chaque espace.
-                            </p>
-                            <p>
-                                L'application a été développée sous Ionic par une équipe de 4 personnes, en suivant la méthodologie
-                                Agile SCRUM et la conception centrée utilisateur.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header collapsed" id="pres" data-toggle="collapse" data-target="#collapse10">
-                        <div>Site de présentation</div>
-                        <div class="text-secondary">2018</div>
-                        <div>
-                            <span class="badge badge-primary">HTML</span>
-                            <span class="badge badge-primary">CSS</span>
-                            <span class="badge badge-primary">Bootstrap</span>
-                        </div>
-                    </div>
-                    <div id="collapse10" class="collapse" aria-labelledby="headingOne" data-parent="#accordionProjects">
-                        <div class="card-body">
-                            <p>
-                                J'ai travaillé sur la version actuelle de ce site web depuis juin 2018, en ajoutant régulièrement de nouveaux projets et expériences.
-                                J'ai utilisé certaines parties du précédent site web et je me suis focalisé sur les informations importantes.
-                            </p>
-                            <p>
-                                Ce site est <a href="https://github.com/vincentfougeras/vincentfougeras.github.io">hébergé sur GitHub Pages</a>.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header collapsed" id="fullscreen" data-toggle="collapse" data-target="#collapse11">
-                        <div>Image en plein écran</div>
-                        <div class="text-secondary">2017</div>
-                        <div>
-                            <span class="badge badge-primary">CSS</span>
-                            <span class="badge badge-primary">jQuery</span>
-                        </div>
-                    </div>
-                    <div id="collapse11" class="collapse" aria-labelledby="headingOne" data-parent="#accordionProjects">
-                        <div class="card-body">
-                            <p>
-                                J'ai développé un code (HTML, CSS, Javascript) permettant d'afficher une image en plein écran lorsque la souris passe au dessus d'un texte.
-                                <a href="fullscreen/index.html">Un site de démonstration</a> a été créé pour présenter ce code.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header collapsed" id="dreamcatcher" data-toggle="collapse" data-target="#collapse12">
-                        <div>Dream Catcher</div>
-                        <div class="text-secondary">2017</div>
-                        <div>
-                            <span class="badge badge-primary">Android</span>
-                        </div>
-                    </div>
-                    <div id="collapse12" class="collapse" aria-labelledby="headingOne" data-parent="#accordionProjects">
-                        <div class="card-body">
-                            <p>Dream Catcher est une application Android destinée à écrire nos rêves. Elle est similaire à une application pour prendre des notes, mais possède des fonctionnalités additionnelles spécifiques à l'écriture des rêves.</p>
-    						<div>
-    							<a href="assets/dream-en1.png" data-caption="L'écran principal comportant la liste des rêves. On peut rechercher un rêve par mot-clef ou trier la liste selon différents critères." data-fancybox="dream" ><img class="img-thumbnail" src="assets/dream-en1.png" width="120"/></a>
-    							<a href="assets/dream-en2.png" data-caption="On peut ajouter un nouveau rêve, avec un titre optionnel." data-fancybox="dream"><img class="img-thumbnail" src="assets/dream-en2.png" width="120"/></a>
-    							<a href="assets/dream-en3.png" data-caption="On peut voir les détails d'un rêve, le modifier, le supprimer, ou le partager." data-fancybox="dream"><img class="img-thumbnail" src="assets/dream-en3.png" width="120"/></a>
-    							<a href="assets/dream-en4.png" data-caption="On peut appliquer un thème adapté à la nuit, et demander à recevoir un rappel pendant la nuit." data-fancybox="dream"><img class="img-thumbnail" src="assets/dream-en4.png" width="120"/></a>
-    						</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header collapsed" id="n7tris" data-toggle="collapse" data-target="#collapse13">
-                        <div>n7tris</div>
-                        <div class="text-secondary">2017</div>
-                        <div>
-                            <span class="badge badge-primary">Java</span>
-                            <span class="badge badge-primary">Interface graphique</span>
-                        </div>
-                    </div>
-                    <div id="collapse13" class="collapse" aria-labelledby="headingOne" data-parent="#accordionProjects">
-                        <div class="card-body">
-                            <div class="d-sm-flex flex-row">
-    							<a href="assets/n7tris.png" data-caption="The main menu screen" data-fancybox="n7tris"><img class="img-thumbnail" src="assets/n7tris.png"/></a>
-    							<p>
-    								n7tris est un jeu de Tetris présentant plusieurs modes de jeu (Classique, Couleurs, Puzzle, Tricky Tower),
-                                    ce qui permet de varier l'expérience de jeu. J'ai travaillé sur n7tris au sein d'un groupe de 7 personnes,
-                                    et je me suis concentré sur les menus du jeu. De même que pour le logiciel de gestion des projets tutorés,
-                                    nous avons utilisé Swing pour l'interface graphique, et Agile SCRUM et SVN pour la gestion de projet.
-    							</p>
-    						</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header collapsed" id="shell" data-toggle="collapse" data-target="#collapse14">
-                        <div>Implémentation du shell</div>
-                        <div class="text-secondary">2017</div>
-                        <div>
-                            <span class="badge badge-primary">C</span>
-                            <span class="badge badge-primary">Programmation système</span>
-                        </div>
-                    </div>
-                    <div id="collapse14" class="collapse" aria-labelledby="headingOne" data-parent="#accordionProjects">
-                        <div class="card-body">
-                            <p>J'ai implémenté un shell dont le fonctionnement est similaire au <a href="https://en.wikipedia.org/wiki/Bourne_shell">Bourne Shell</a>. Ainsi, ce shell peut :</p>
-    						<ul>
-    							<li>exécuter des commandes externes (ls, pwd ...)</li>
-    							<li>exécuter des commandes internes au shell (cd, jobs ...)</li>
-    							<li>gérer la suspension, l'interuption, le lancement de processus en tâche de fond</li>
-    							<li>gérer les redirections et les tubes de communication</li>
-    						</ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header collapsed" id="shell" data-toggle="collapse" data-target="#collapse15">
-                        <div>Site de présentation (précédent)</div>
-                        <div class="text-secondary">2016-2017</div>
-                        <div>
-                            <span class="badge badge-primary">PHP</span>
-                            <span class="badge badge-primary">CSS</span>
-                            <span class="badge badge-primary">Javascript</span>
-                        </div>
-                    </div>
-                    <div id="collapse15" class="collapse" aria-labelledby="headingOne" data-parent="#accordionProjects">
-                        <div class="card-body">
-                            <p>J'ai créé un site pour présenter le travail que j'ai effectué en 3 ans.</p>
-                            <p>Ce site était principalement codé à la main, sans utiliser de framework, et comportait
-                               un formulaire de contact permettant aux utilisateurs de m'envoyer des emails.</p>
-                            <div>
-    							<a href="assets/pres1.png"
-    							data-caption="Website header"
-                                data-fancybox="pres" ><img class="img-thumbnail" src="assets/pres1.png" width="120"/></a>
-    							<a href="assets/pres2.png"  data-caption="Section Compétences" data-fancybox="pres">
-                                    <img class="img-thumbnail" src="assets/pres2.png" width="120"/></a>
-    							<a href="assets/pres3.png"  data-caption="Section Expérience" data-fancybox="pres">
-                                    <img class="img-thumbnail" src="assets/pres3.png" width="120"/></a>
-    							<a href="assets/pres4.png"  data-caption="Section Contact"
-                                    data-fancybox="pres"><img class="img-thumbnail" src="assets/pres4.png" width="120"/></a>
-                                <a href="assets/pres5.png"  data-caption="Section Projets et responsive design"
-                                    data-fancybox="pres"><img class="img-thumbnail" src="assets/pres5.png" width="120"/></a>
-    						</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header collapsed" id="ecommerce" data-toggle="collapse" data-target="#collapse16">
-                        <div>Site d'e-commerce</div>
-                        <div class="text-secondary">2016</div>
-                        <div>
-                            <span class="badge badge-primary">PHP</span>
-                            <span class="badge badge-primary">Patron d'architecture MVC</span>
-                        </div>
-                    </div>
-                    <div id="collapse16" class="collapse" aria-labelledby="headingOne" data-parent="#accordionProjects">
-                        <div class="card-body">
-                            <p>Nous avons réalisé dans un groupe de deux personnes la partie back-office d'un site d'e-commerce.
-                               L'utilisateur a la possibilité de créer, modifier, supprimer des produits et des catégories de produits.</p>
-                            <p>Nous avons appris la programmation orientée objet MVC2 en PHP.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header collapsed" id="ecommerce" data-toggle="collapse" data-target="#collapse17">
-                        <div>Programmes de chiffrement</div>
-                        <div class="text-secondary">2015-2016</div>
-                        <div>
-                            <span class="badge badge-primary">Python</span>
-                            <span class="badge badge-primary">Systèmes cryptographiques</span>
-                        </div>
-                    </div>
-                    <div id="collapse17" class="collapse" aria-labelledby="headingOne" data-parent="#accordionProjects">
-                        <div class="card-body">
-                            <p>
-                                J'ai étudié différents systèmes cryptographiques dans une équipe de 4 personnes.
-                                Quatres systèmes ont été étudiés : César, Vigenère, Vernam et RSA. J'ai réalisé des programmes
-                                en Python permettant de chiffrer et de déchiffrer des messages selon les méthodes de César et de Vigenère.
-                           </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header collapsed" id="ecommerce" data-toggle="collapse" data-target="#collapse18">
-                        <div>Logiciel de gestion de projets</div>
-                        <div class="text-secondary">2015</div>
-                        <div>
-                            <span class="badge badge-primary">Java</span>
-                            <span class="badge badge-primary">JUnit</span>
-                            <span class="badge badge-primary">Agile SCRUM</span>
-                            <span class="badge badge-primary">SVN</span>
-                            <span class="badge badge-primary">AsciiDoc</span>
-                        </div>
-                    </div>
-                    <div id="collapse18" class="collapse" aria-labelledby="headingOne" data-parent="#accordionProjects">
-                        <div class="card-body">
-                            <p>Nous avons conçu un logicel permettant de gérer les projets tutorés : ajout de sujets,
-                                création des groupes d'étudiants, assignation des projets aux groupes ...</p>
-                            <p>Nous avons utilisé un ensemble d'outils et de méthodes pour mettre à bien ce projet :
-                            </p>
-                            <ul>
-                                <li>Tests unitaires en Java avec JUnit</li>
-                                <li>Méthode agile SCRUM</li>
-                                <li>Versionnement de projet avec SVN</li>
-                                <li>Documentation avec AsciiDoc</li>
-    						</p>
-                        </div>
+                    <div :id="'collapse' + project.id" class="collapse" :class="{ show: index === 0 }" aria-labelledby="headingOne" data-parent="#accordionProjects">
+                        <div class="card-body" v-html="project.description"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <footer>
+    <footer id="footer">
         <div class="container">
-            <h3><a href="mailto:fougeras.vincent@gmail.com">Contactez moi</h3>
+            <h3><a href="mailto:fougeras.vincent@gmail.com">{{ title }}</h3>
             <hr/>
             <p><a href="#">Vincent Fougeras</a></p>
             <div>Flag icons designed by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
         </div>
     </footer>
 </body>
+
+<script src="js/scroll.js"></script>
+<script src="js/locale.js"></script>
+
+<script src="js/header.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/description.js"></script>
+<script src="js/resume.js"></script>
+<script src="js/experience.js"></script>
+<script src="js/skills.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/footer.js"></script>
