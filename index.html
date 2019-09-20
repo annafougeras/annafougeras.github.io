@@ -74,17 +74,17 @@
     </section>
     <section id="experience">
         <div class="container">
-            <h2>Expérience</h2>
+            <h2>{{ title }}</h2>
             <div class="accordion" id="accordionExperience">
                 <div v-for="(exp, index) in experiences" class="card" :key="index">
-                    <div class="card-header" :class="{ collapsed: index !== 1 }" :id="exp.id" data-toggle="collapse" :data-target="'#collapse' + exp.id">
+                    <div class="card-header" :class="{ collapsed: index !== 0 }" :id="exp.id" data-toggle="collapse" :data-target="'#collapse' + exp.id">
                         <div>{{ exp.title }}</div>
                         <div class="text-secondary">{{ exp.year }}</div>
                         <div>
                             <span v-for="skill in exp.skills" class="badge badge-primary">{{ skill }}</span>
                         </div>
                     </div>
-                    <div :id="'collapse' + exp.id" class="collapse" :class="{ show: index === 1 }" aria-labelledby="headingOne" data-parent="#accordionExperience">
+                    <div :id="'collapse' + exp.id" class="collapse" :class="{ show: index === 0 }" aria-labelledby="headingOne" data-parent="#accordionExperience">
                         <div class="card-body" v-html="exp.description"></div>
                     </div>
                 </div>

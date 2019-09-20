@@ -4,14 +4,25 @@ let experience = {
         experiences: [
             {
                 'id': 'blevrault',
-                'title': 'Conception de parcours de visite personnalisés à Berger-Levrault',
+                'title': 'Interface de sélection de profils visiteurs à Berger-Levrault',
                 'year': '2019',
-                'skills': ['IHM', '...'],
+                'skills': ['Vue.js', 'Adobe XD', 'Raspberry Pi', 'Arduino'],
                 'description': `
                     <p>
-                        Je vais effectuer un stage en conception IHM de 4 mois dans une équipe de R&D
-                        au sein de <a href="https://www.berger-levrault.com/">Berger-Levrault</a>.
+                        J'ai effectué un stage de 4 mois au sein de <a href="https://www.berger-levrault.com/">Berger-Levrault</a>,
+                        accompagné d'une doctorante en IHM. J'ai travaillé sur la création de parcours de visite personnalisés
+                        dans les musées : le personnel du musée souhaite savoir pour quels types de visiteurs des parcours de visite
+                        devraient être créés.
                     </p>
+                    <p>
+                        J'ai développé une <a href="https://fr.wikipedia.org/wiki/Interface_utilisateur_tangible">interface tangible</a> pour visualiser et sélectionner des profils visiteurs.
+                        J'ai également conçu et développé une interface graphique équivalente. J'ai ensuite participé à l'écriture
+                        d'un protocole expérimental permettant d'évaluer l'utilisabilité des deux interfaces.
+                    </p>
+                    <div>
+                        <a href="assets/bl_tui.jpg" data-caption="L'interface tangible" data-fancybox="bl" ><img class="img-thumbnail" src="assets/bl_tui.jpg" width="150"/></a>
+                        <a href="assets/bl_gui.jpg" data-caption="L'interface graphique" data-fancybox="bl"><img class="img-thumbnail" src="assets/bl_gui.jpg" width="150"/></a>
+                    </div>
                     `
             },
             {
@@ -105,14 +116,24 @@ let experience = {
         experiences: [
             {
                 'id': 'blevrault',
-                'title': 'Personalized guided tours design at Berger-Levrault',
+                'title': 'Visitor profiles selection at Berger-Levrault',
                 'year': '2019',
-                'skills': ['UX design', '...'],
+                'skills': ['Vue.js', 'Adobe XD', 'Raspberry Pi', 'Arduino'],
                 'description': `
                     <p>
-                        I'm starting a 4-month UX design internship in a research team at
-                        <a href="https://www.berger-levrault.com/">Berger-Levrault</a>.
+                        I had a 4 month internship at <a href="https://www.berger-levrault.com/">Berger-Levrault</a>,
+                        during which I collaborated with a PhD student. I worked on the creation of personalized visit routes
+                        in museums : the museum staff wants to see for which types of visitors such routes should be created.
                     </p>
+                    <p>
+                        I developed a <a href="https://en.wikipedia.org/wiki/Tangible_user_interface">tangible interface</a> to visualize et select visitor profiles. I also designed and developed an
+                        equivalent graphical interface. I then prepared an experimental protocol to test the usability of the two
+                        interfaces.
+                    </p>
+                    <div>
+                        <a href="assets/bl_tui.jpg" data-caption="The tangible user interface" data-fancybox="bl" ><img class="img-thumbnail" src="assets/bl_tui.jpg" width="150"/></a>
+                        <a href="assets/bl_gui.jpg" data-caption="The graphical user interface" data-fancybox="bl"><img class="img-thumbnail" src="assets/bl_gui.jpg" width="150"/></a>
+                    </div>
                     `
             },
             {
