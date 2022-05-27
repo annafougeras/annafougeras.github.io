@@ -1,7 +1,7 @@
 let description = {
     'fr': {
         description: `
-        <p>Je suis passioné par les nouvelles technologies et le futur de l'informatique.</p>
+        <p>Je suis passionné par les nouvelles technologies et le futur de l'informatique.</p>
         <p>Je suis étudiant en <a href="https://masterihm.fr">Master IHM</a> à l'université Toulouse Paul Sabatier.
             J'ai effectué un DUT informatique et une L3 informatique, qui m'ont permis d'en apprendre beaucoup sur le développement de logiciels,
             la gestion de bases de données et l'administration système. J'ai hâte de pouvoir approfondir mes connaissances dans la conception d'IHM
