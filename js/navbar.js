@@ -6,7 +6,7 @@ let navbar = {
             projects: 'Projets',
         },
         resume: {
-            href: 'assets/CV_FOUGERAS_Vincent.pdf',
+            href: 'assets/CV_FOUGERAS_Anna.pdf',
             title: 'CV',
         },
         language: {
@@ -22,7 +22,7 @@ let navbar = {
             projects: 'Projects',
         },
         resume: {
-            href: 'assets/CV_FOUGERAS_Vincent_en.pdf',
+            href: 'assets/CV_FOUGERAS_Anna_en.pdf',
             title: 'Resume',
         },
         language: {

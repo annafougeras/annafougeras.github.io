@@ -1,10 +1,10 @@
 let resume = {
     'fr': {
-        cvAsset: 'assets/CV_FOUGERAS_Vincent.pdf',
+        cvAsset: 'assets/CV_FOUGERAS_Anna.pdf',
         cvText: 'Télécharger mon CV',
     },
     'en': {
-        cvAsset: 'assets/CV_FOUGERAS_Vincent_en.pdf',
+        cvAsset: 'assets/CV_FOUGERAS_Anna_en.pdf',
         cvText: 'Get my resume',
     }
 }

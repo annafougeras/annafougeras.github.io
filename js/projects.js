@@ -34,7 +34,7 @@ let projects = {
                     J'ai utilisé certaines parties du précédent site web et je me suis focalisé sur les informations importantes.
                 </p>
                 <p>
-                    Ce site est <a href="https://github.com/vincentfougeras/vincentfougeras.github.io">hébergé sur GitHub Pages</a>.
+                    Ce site est <a href="https://github.com/annafougeras/annafougeras.github.io">hébergé sur GitHub Pages</a>.
                 </p>
             `
         },
@@ -217,7 +217,7 @@ let projects = {
                     I have used parts of my previous presentation website and I have focused on the important pieces of information.
                 </p>
                 <p>
-                    This website is <a href="https://github.com/vincentfougeras/vincentfougeras.github.io">hosted on GitHub Pages</a>.
+                    This website is <a href="https://github.com/annafougeras/annafougeras.github.io">hosted on GitHub Pages</a>.
                 </p>
             `
         },
