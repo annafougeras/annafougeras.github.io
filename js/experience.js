@@ -3,6 +3,23 @@ let experience = {
         title: 'Expérience',
         experiences: [
             {
+                'id': 'ingenuity',
+                'title': 'Conception et développement d\'interfaces de supervision à Ingenuity i/o',
+                'year': '2020-2022',
+                'skills': ['Qt', 'C++', 'C', 'Wordpress'],
+                'description': `
+                    <p>
+                        J'ai travaillé sur des projets innovants liés à l'industrie du transport, notamment un outil de
+                        contrôle et de supervision d'une flotte de véhicules autonomes.
+                    </p>
+                    <ul>
+                        <li>Développement d'IHM à haute-performance en utilisant Qt / C++ et des outils développés en interne</li>
+                        <li>Conception des interfaces en collaboration avec les autres membres de l'équipe et les utilisateurs finaux</li>
+                        <li>Utilisé des méthodes de développement Agile pour amener l'outil rapidement dans les mains de l'utilisateur</li>
+                    </ul>
+                `
+            },
+            {
                 'id': 'blevrault',
                 'title': 'Interface de sélection de profils visiteurs à Berger-Levrault',
                 'year': '2019',
@@ -10,7 +27,7 @@ let experience = {
                 'description': `
                     <p>
                         J'ai effectué un stage de 4 mois au sein de <a href="https://www.berger-levrault.com/">Berger-Levrault</a>,
-                        accompagné d'une doctorante en IHM. J'ai travaillé sur la création de parcours de visite personnalisés
+                        accompagnée d'une doctorante en IHM. J'ai travaillé sur la création de parcours de visite personnalisés
                         dans les musées : le personnel du musée souhaite savoir pour quels types de visiteurs des parcours de visite
                         devraient être créés.
                     </p>
@@ -82,7 +99,7 @@ let experience = {
                         pour m'aider dans le développement du site. Ce framework permet notamment de sécuriser plus facilement
                         et plus efficacement les sites web.
                     </p>
-                    <p>Je me suis également occupé du back-office dans son intégralité, en utilisant notamment le framework <a href="http://getbootstrap.com/">Bootstrap</a> pour la partie front-end.</p>
+                    <p>Je me suis également occupée du back-office dans son intégralité, en utilisant notamment le framework <a href="http://getbootstrap.com/">Bootstrap</a> pour la partie front-end.</p>
                     <div>
                         <a href="assets/braco1.png" data-caption="Le back-office du site" data-fancybox="braco" ><img class="img-thumbnail" src="assets/braco1.png" width="150"/></a>
                         <a href="assets/braco2.png"  data-caption="Le back-office du site" data-fancybox="braco"><img class="img-thumbnail" src="assets/braco2.png" width="150"/></a>
@@ -114,6 +131,23 @@ let experience = {
     'en': {
         title: 'Experience',
         experiences: [
+            {
+                'id': 'ingenuity',
+                'title': 'Design and development of monitoring interfaces at Ingenuity i/o',
+                'year': '2020-2022',
+                'skills': ['Qt', 'C++', 'C', 'Wordpress'],
+                'description': `
+                    <p>
+                        Worked on innovative projects linked to the transport industry, such as a tool to monitor
+                        and control a fleet of autonomous vehicles.
+                    </p>
+                    <ul>
+                        <li>Developed high performance human-computer interfaces using Qt C++ and home-developped tools</li>
+                        <li>Designed the interfaces in collaboration with other team members and with the end user</li>
+                        <li>Used Agile methods of development to quickly get the tool in the hands of the end user</li>
+                    </ul>
+                `
+            },
             {
                 'id': 'blevrault',
                 'title': 'Visitor profiles selection at Berger-Levrault',

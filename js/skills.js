@@ -66,30 +66,31 @@ let skillsCommon = {
     skills: {
         'software': [
             { title: 'Python', class: 'devicon-python-plain-wordmark', stars: '★★★' },
-            { title: 'Java', class: 'devicon-java-plain-wordmark', stars: '★★★' },
+            { title: 'Qt', class: 'devicon-qt-original', stars: '★★★' },
+            { title: 'C++', class: 'devicon-cplusplus-plain-wordmark', stars: '★★' },
             { title: 'C', class: 'devicon-c-plain-wordmark', stars: '★★' },
-            { title: 'Android', class: 'devicon-android-plain-wordmark', stars: '★★' },
+            { title: 'Java', class: 'devicon-java-plain-wordmark', stars: '★★' },
+            { title: 'Android', class: 'devicon-android-plain-wordmark', stars: '★' },
         ],
         'frontend': [
             { title: 'HTML', class: 'devicon-html5-plain-wordmark', stars: '★★★' },
-            { title: 'Bootstrap', class: 'devicon-bootstrap-plain-wordmark', stars: '★★★' },
             { title: 'CSS', class: 'devicon-css3-plain-wordmark', stars: '★★' },
-            { title: 'Sass', class: 'devicon-sass-original', stars: '★★' },
+            { title: 'Vue.js', class: 'devicon-vuejs-plain', stars: '★★' },
             { title: 'Angular', class: 'devicon-angularjs-plain', stars: '★★' },
+            { title: 'Sass', class: 'devicon-sass-original', stars: '★★' },
             { title: 'JavaScript', class: 'devicon-javascript-plain', stars: '★★' },
-            { title: 'jQuery', class: 'devicon-jquery-plain-wordmark', stars: '★★' },
+            { title: 'WordPress', class: 'devicon-wordpress-plain', stars: '★' },
         ],
         'backend': [
-            { title: 'PHP', class: 'devicon-php-plain', stars: '★★' },
-            { title: 'Laravel', class: 'devicon-laravel-plain-wordmark', stars: '★★★' },
+            { title: 'Laravel', class: 'devicon-laravel-plain-wordmark', stars: '★★' },
             { title: 'MySQL', class: 'devicon-mysql-plain-wordmark', stars: '★★' },
+            { title: 'PHP', class: 'devicon-php-plain', stars: '★★' },
         ],
         'tools': [
+            { title: 'Illustrator', class: 'devicon-illustrator-plain', stars: '★★' },
+            { title: 'Xd', class: 'devicon-xd-plain', stars: '★★' },
+            { title: 'Premiere Pro', class: 'devicon-premierepro-plain', stars: '★★' },
             { title: 'Bash', class: 'devicon-linux-plain', stars: '★★' },
-            { title: 'Git', class: 'devicon-git-plain-wordmark', stars: '★★' },
-            { title: 'Inkscape', class: 'devicon-inkscape-plain-wordmark', stars: '★' },
-            { title: 'PHPStorm', class: 'devicon-phpstorm-plain-wordmark', stars: '★★' },
-            { title: 'PyCharm', class: 'devicon-pycharm-plain-wordmark', stars: '★' },
         ]
     }
 }

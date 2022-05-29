@@ -80,7 +80,7 @@ let projects = {
                     <p>
                         n7tris est un jeu de Tetris présentant plusieurs modes de jeu (Classique, Couleurs, Puzzle, Tricky Tower),
                         ce qui permet de varier l'expérience de jeu. J'ai travaillé sur n7tris au sein d'un groupe de 7 personnes,
-                        et je me suis concentré sur les menus du jeu. De même que pour le logiciel de gestion des projets tutorés,
+                        et je me suis concentrée sur les menus du jeu. De même que pour le logiciel de gestion des projets tutorés,
                         nous avons utilisé Swing pour l'interface graphique, et Agile SCRUM et SVN pour la gestion de projet.
                     </p>
                 </div>

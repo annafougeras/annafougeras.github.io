@@ -1,9 +1,9 @@
 let header = {
     'fr': {
-        title: 'Etudiant en informatique'
+        title: 'Conceptrice & développeuse d\'IHM'
     },
     'en': {
-        title: 'Computer science student'
+        title: 'HCI designer & developer'
     }
 }
 
