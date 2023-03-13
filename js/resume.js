@@ -4,7 +4,7 @@ let resume = {
         cvText: 'Télécharger mon CV',
     },
     'en': {
-        cvAsset: 'assets/CV_FOUGERAS_Anna_en.pdf',
+        cvAsset: 'assets/CV_FOUGERAS_Anna.pdf',
         cvText: 'Get my resume',
     }
 }

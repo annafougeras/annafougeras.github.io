@@ -5,7 +5,7 @@ let experience = {
             {
                 'id': 'ingenuity',
                 'title': 'Conception et développement d\'interfaces de supervision à Ingenuity i/o',
-                'year': '2020-2022',
+                'year': '2020-2023',
                 'skills': ['Qt', 'C++', 'C', 'Wordpress'],
                 'description': `
                     <p>
@@ -134,7 +134,7 @@ let experience = {
             {
                 'id': 'ingenuity',
                 'title': 'Design and development of monitoring interfaces at Ingenuity i/o',
-                'year': '2020-2022',
+                'year': '2020-2023',
                 'skills': ['Qt', 'C++', 'C', 'Wordpress'],
                 'description': `
                     <p>
